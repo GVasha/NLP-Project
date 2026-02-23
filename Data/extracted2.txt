@@ -1,5 +1,4 @@
 Source: https://www.interior.gob.es/opencms/es/servicios-al-ciudadano/tramites-y-gestiones/extranjeria/ciudadanos-de-la-union-europea/numero-de-Identidad-de-extranjero-nie/
-
 Foreigner's Identity Number (NIE)
 Foreigners who, due to their economic, professional, social, or other interests, have ties to Spain, will be assigned a personal, unique, and sequential identification number.
 
