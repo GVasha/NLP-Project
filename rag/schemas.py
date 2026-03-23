@@ -31,3 +31,26 @@ class CanonicalDocument:
 
     def to_dict(self) -> Dict:
         return asdict(self)
+    
+@dataclass
+class ChunkRecord:
+    chunk_id: str
+    doc_id: str
+    file_name: str
+    title: str
+    source_url: Optional[str]
+    source_domain: Optional[str]
+    institution: Optional[str]
+    document_type: Optional[str]
+    procedure_code: Optional[str]
+    form_ids: List[str]
+    fee_codes: List[str]
+    section_title: str
+    section_type: str
+    section_order: int
+    chunk_order: int
+    text: str
+    text_length: int
+
+    def to_dict(self) -> Dict:
+        return asdict(self)
