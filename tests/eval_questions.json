@@ -1,0 +1,109 @@
+[
+  {
+    "id": "Q01",
+    "question": "How do I obtain my student card?",
+    "category": "specific",
+    "expected_behavior": "Answer should describe the procedure using only retrieved context.",
+    "should_require_specific_procedure": true
+  },
+  {
+    "id": "Q02",
+    "question": "Where can I process my application?",
+    "category": "specific",
+    "expected_behavior": "Answer should mention the office/location only if supported by the retrieved procedure.",
+    "should_require_specific_procedure": true
+  },
+  {
+    "id": "Q03",
+    "question": "How much is the fee?",
+    "category": "specific",
+    "expected_behavior": "If the amount is not explicitly in context, answer should clearly say the retrieved sources do not provide the amount.",
+    "should_require_specific_procedure": true
+  },
+  {
+    "id": "Q04",
+    "question": "What documents do I need for the student card?",
+    "category": "specific",
+    "expected_behavior": "Answer should list documents only if they are explicitly supported by the student card sources.",
+    "should_require_specific_procedure": true
+  },
+  {
+    "id": "Q05",
+    "question": "How do I book the appointment for the student card?",
+    "category": "specific",
+    "expected_behavior": "Answer should describe appointment information only if it appears in the retrieved context.",
+    "should_require_specific_procedure": true
+  },
+
+  {
+    "id": "Q06",
+    "question": "What documents do I need?",
+    "category": "ambiguous",
+    "expected_behavior": "Answer should say the required documents depend on the exact procedure and avoid inventing a single document list.",
+    "should_require_specific_procedure": false
+  },
+  {
+    "id": "Q07",
+    "question": "Where do I start?",
+    "category": "ambiguous",
+    "expected_behavior": "Answer should stay cautious and explain that the first step depends on the specific procedure.",
+    "should_require_specific_procedure": false
+  },
+  {
+    "id": "Q08",
+    "question": "I have not started my application yet.",
+    "category": "ambiguous",
+    "expected_behavior": "Answer should not assume one exact procedure; it should explain that the correct next step depends on the procedure.",
+    "should_require_specific_procedure": false
+  },
+  {
+    "id": "Q09",
+    "question": "How do I begin the process as a student?",
+    "category": "ambiguous",
+    "expected_behavior": "Answer should remain general and grounded, without mixing multiple procedures as if they were one.",
+    "should_require_specific_procedure": false
+  },
+  {
+    "id": "Q10",
+    "question": "Can I process everything at the police station?",
+    "category": "ambiguous",
+    "expected_behavior": "Answer should avoid overgeneralizing and should indicate that this depends on the exact procedure if context is mixed.",
+    "should_require_specific_procedure": false
+  },
+
+  {
+    "id": "Q11",
+    "question": "Can I work full-time with a student visa?",
+    "category": "out_of_scope",
+    "expected_behavior": "If the retrieved context does not cover this, answer should clearly say the information is not available in the retrieved sources.",
+    "should_require_specific_procedure": false
+  },
+  {
+    "id": "Q12",
+    "question": "What happens if my visa expires?",
+    "category": "out_of_scope",
+    "expected_behavior": "Answer should avoid guessing and state that the retrieved sources do not provide this information if unsupported.",
+    "should_require_specific_procedure": false
+  },
+  {
+    "id": "Q13",
+    "question": "Can my family come with me?",
+    "category": "out_of_scope",
+    "expected_behavior": "Answer should say the retrieved sources do not clearly answer this unless relevant context is actually retrieved.",
+    "should_require_specific_procedure": false
+  },
+  {
+    "id": "Q14",
+    "question": "How long does the process take?",
+    "category": "out_of_scope",
+    "expected_behavior": "If processing time is not in context, answer should explicitly say it is not available in the retrieved sources.",
+    "should_require_specific_procedure": false
+  },
+  {
+    "id": "Q15",
+    "question": "Can I apply from Turkey before arriving in Spain?",
+    "category": "out_of_scope",
+    "expected_behavior": "Answer should only respond if the retrieved sources explicitly cover this; otherwise it should say the context does not answer it.",
+    "should_require_specific_procedure": false
+  }
+]

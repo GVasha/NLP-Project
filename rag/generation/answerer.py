@@ -3,12 +3,18 @@ from ollama import chat
 from rag.config import OLLAMA_MODEL
 
 
-SYSTEM_PROMPT = """You answer immigration/admin procedure questions using only the provided context.
+SYSTEM_PROMPT = """You answer immigration and administrative procedure questions using only the provided context.
+
 Rules:
-- Use only the retrieved context.
-- If the answer is not clearly in the context, say that the information is not available in the retrieved sources.
-- Be concise and practical.
-- End with a short Sources section listing title + section + procedure code.
+- Use only the retrieved context for factual claims.
+- Do not invent requirements, deadlines, offices, forms, steps, or legal advice.
+- If the retrieved context does not clearly answer the question, say so plainly.
+- Be concise, practical, and neutral.
+- Prefer a clean structure:
+  1. Direct answer
+  2. Key details or limitations if needed
+- Do not ask follow-up questions.
+- Do not add a separate Sources section inside the answer.
 """
 
 
@@ -40,6 +46,14 @@ class Answerer:
 
 Context:
 {context}
+
+Write the answer for the user.
+
+Formatting instructions:
+- Start with the answer immediately.
+- If the context supports the answer, explain it in 1-2 short paragraphs.
+- If the context is incomplete or ambiguous, explicitly say that the retrieved sources do not fully answer the question.
+- Only mention details that are directly supported by the context.
 """
 
         response = chat(
@@ -50,4 +64,4 @@ Context:
             ],
         )
 
-        return response["message"]["content"]
+        return response["message"]["content"].strip()
