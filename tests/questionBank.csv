@@ -1,0 +1,27 @@
+id,question,expected_keywords,expected_procedure_code,expected_section_type
+1,What documents are required to extend a short-term stay?,"EX29|Tax model 790 Code 012|passport|travel insurance",994236,documentation
+2,Where can I submit an extension of short-term stay application?,"Aliens Office|Police Station|where to apply",994236,where_to_apply
+3,What is the fee code for extending a short-term stay?,"790|012|fee|payment",994236,fees
+4,How long can a short-term stay extension last?,"three months|six months|extension duration",994236,duration_or_validity
+5,Which form should I use for short-term stay extension?,"EX29|application form|models of forms",994236,forms
+6,Who can apply for a student card for foreigners?,"student|permission to stay longer than six months|stakeholders",993954,stakeholders
+7,What documents do I need for the student card process?,"EX17|Tax model 790 Code 012|application form",993954,documentation
+8,Where do I process a student card for foreigners?,"Office for Foreigners|Police Station|domiciled",993954,where_to_apply
+9,What is the procedure code for student card for foreigners?,"993954|code of the procedure",993954,procedure_metadata
+10,What form is used for student card for foreigners?,"EX17|Foreigner Identity Card|TIE",993954,forms
+11,How do I request an NIE in Spain?,"General Directorate of Police|Immigration Offices|Police Stations",994354,procedure_steps
+12,What are the requirements to obtain an NIE by request?,"not in irregular situation|reasons for requesting|five days",994354,requirements
+13,What documentation is needed for NIE assignment?,"EX15|NIE|Tax model 790 Code 012",994354,documentation
+14,Where can I apply for NIE assignment if I am abroad?,"Spanish Consular Offices|General Commissariat|NIE allocation",994354,where_to_apply
+15,What is the NIE assignment procedure code?,"994354|code of the procedure",994354,procedure_metadata
+16,What is the validity of a registration certificate?,"1 year|renewable|period of validity",994596,duration_or_validity
+17,Who is eligible for the registration certificate procedure?,"cannot be documented|wishes to be documented by Spain",994596,stakeholders
+18,What documents are required for a registration certificate?,"EX16|Tax model 790 Code 012|registration card",994596,documentation
+19,Where do I file a registration certificate application?,"Foreigner Office|Police Station|where can I process",994596,where_to_apply
+20,What is the procedure code for registration certificate?,"994596|code of the procedure",994596,procedure_metadata
+21,What form is used for initial or renewal residence card?,"EX17|TIE|Foreigner Identity Card",994694,forms
+22,Where can I process initial or renewal residence card?,"Immigration Offices|Police Stations|application",994694,where_to_apply
+23,What documents are needed for return authorization?,"EX13|Tax model 790 Code 012|request form",994614,documentation
+24,How long is return authorization valid?,"ninety days|90 days|entry through Spanish authorized border crossing points",994614,duration_or_validity
+25,Where do I submit a return authorization request?,"Aliens Office|Police Units|where can I process",994614,where_to_apply
+26,Which form do I need for return authorization?,"EX13|Request for Return Authorization|models of forms",994614,forms
