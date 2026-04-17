@@ -1,0 +1,11 @@
+id,question,expected_keywords,expected_procedure_code,expected_section_type,expected_form_id,expected_behavior
+R1,What is the weather in Madrid tomorrow?,,,,,uncertain
+R2,Give me the phone number of the police station that handles NIE.,,,,,uncertain
+R3,Can you guarantee my application will be approved?,,,,,uncertain
+R4,What documents do I need?,,,,,uncertain
+R5,Is fee 790 code 099 used for these procedures?,,,,,uncertain
+R6,Can I apply online with no form and no passport?,,,,,uncertain
+R7,Tell me the exact appointment URL for Barcelona office.,,,,,uncertain
+R8,What is fee 790 code 012 used for?,tax model 790 code 012|fee amount,994236,fees,,answer
+R9,Where can I process my application?,aliens office|police station,,where_to_apply,,answer
+R10,What form is used for student card for foreigners?,ex17,993954,forms,EX17,answer

@@ -1,0 +1,137 @@
+id,question,expected_procedure_code,expected_section_type,expected_form_id,expected_behavior,retrieved_codes,retrieved_sections,retrieved_form_ids,hit_procedure_code,hit_section_type,hit_form_id,retrieval_keyword_coverage,answer_keyword_coverage,grounded_sentence_ratio,unsupported_claim_sentences,claim_sentences,detected_uncertainty,accuracy_pass,robustness_pass,answer_preview
+1,What documents are required to extend a short-term stay?,994236,documentation,EX29,,994236|994236|994236,documentation|appeals|documentation,EX29,True,True,True,0.750,0.500,1.000,0,6,True,True,,"To extend a short-term stay, the following documents are required:
+
+1. A model of request for extension of stay
+2. Proof of payment of the tax model 790 Code 012 (amount not specified)
+3. An ordinary passport or travel d..."
+2,Where can I submit an extension of short-term stay application?,994236,where_to_apply,,,994236|994236|994236,where_to_apply|forms|documentation,EX29,True,True,True,1.000,1.000,1.000,0,6,False,True,,"You can submit an extension of short-term stay application to any of the following locations:
+
+1. Aliens Office (https://www.mptfp.gob.es/portal/delegaciones_gobierno/extranjeria/extranjeria_ddgg.html)
+2. Superior Headqu..."
+3,What is the fee code for extending a short-term stay?,994236,fees,,,994236|994236|994236,fees|documentation|procedure_metadata,EX29,True,True,True,0.667,0.667,1.000,0,2,False,True,,"The fee code for extending a short-term stay is 012, according to Procedure code 994236.
+
+Sources:
+- Printed Tax Model 790 Code 012
+- View amount of fees (https://sede.policia.gob.es/portalCiudadano/_ca-valencia/tramites..."
+4,How long can a short-term stay extension last?,994236,duration_or_validity,,,994236|994236|994236,duration_or_validity|forms|procedure_metadata,EX29,True,True,True,1.000,0.333,1.000,0,3,False,False,,"The maximum length of a short-term stay extension is 3 months, with no exception in cases of entry with visa and only in exceptional circumstances for entries without a visa. 
+
+Sources:
+Extension of short-term stay, Sect..."
+5,Which form should I use for short-term stay extension?,994236,forms,EX29,,994236|994236|994236,forms|classification|appeals,EX29,True,True,True,1.000,1.000,1.000,0,2,False,True,,"The form to use for a short-term stay extension is Form EX29.
+
+Sources:
+Application for authorization of stay and extensions (LO 4/2000 and RD 1155/2024) (Form EX29), Section: Models of forms, Procedure code: 994236."
+6,Who can apply for a student card for foreigners?,993954,stakeholders,,,993954|993954|993954,where_to_apply|stakeholders|procedure_metadata,EX17,True,True,True,1.000,0.667,1.000,0,5,False,True,,"Who can apply for a student card for foreigners?
+
+Any foreigner who is a student with permission to stay longer than six months.
+
+Sources:
+Student Card for Foreigners / Where can I process my application? (993954)
+Studen..."
+7,What documents do I need for the student card process?,993954,documentation,EX17,,993954|993954|993954,documentation|procedure_metadata|information,EX17,True,True,True,1.000,1.000,1.000,0,2,False,True,,"According to Source 1 (https://sede.policia.gob.es/portalCiudadano/_ca-valencia/tramites_extranjeria_tramite_asignacion_nie.php), for the student card process, you will need:
+
+* Application form foreigner ID card
+* Proof..."
+8,Where do I process a student card for foreigners?,993954,where_to_apply,,,993954|993954|994694,where_to_apply|procedure_metadata|where_to_apply,EX17,True,True,True,1.000,1.000,1.000,0,5,False,True,,"To process a student card for foreigners, you must submit the application and accompanying documents to either an Office for Foreigners or a Police Station in the place where you are domiciled.
+
+Sources:
+Student Card for..."
+9,What is the procedure code for student card for foreigners?,993954,procedure_metadata,,,993954|993954|994694,procedure_metadata|documentation|procedure_metadata,EX17,True,True,True,1.000,1.000,1.000,0,4,False,True,,"The procedure code for a student card for foreigners is 993954.
+
+Sources:
+Student Card for Foreigners, Section: Code of the procedure, Procedure code: 993954.
+Title: Student Card for Foreigners, Section: Documentation, P..."
+10,What form is used for student card for foreigners?,993954,forms,EX17,,993954|993954|993954,forms|procedure_metadata|documentation,EX17,True,True,True,1.000,0.000,1.000,0,2,False,False,,"The form used for a student card for foreigners is the Application form foreigner ID card.
+
+Sources:
+Title: Student Card for Foreigners
+Section: Models of forms
+Procedure code: 993954
+URL: https://sede.policia.gob.es/por..."
+11,How do I request an NIE in Spain?,994354,procedure_steps,,,994354|994354|994354,procedure_steps|general|regulations,EX15,True,True,True,1.000,0.000,0.800,1,5,False,False,,"To request an NIE in Spain, you must:
+
+1. Go to a Police Station or Immigration Office, either directly or through a Spanish Consular Office abroad.
+2. Submit your application in person.
+
+Note: You can also apply for an ..."
+12,What are the requirements to obtain an NIE by request?,994354,requirements,,,994354|994354|994354,procedure_metadata|appeals|requirements,EX15,True,True,True,1.000,0.333,1.000,0,5,False,False,,"To obtain an NIE by request, the following requirements and conditions must be met:
+
+1. Not being in an irregular situation in Spain.
+2. Communicating the reasons for requesting the allocation of this number.
+
+No specifi..."
+13,What documentation is needed for NIE assignment?,994354,documentation,EX15,,994354|994354|994354,procedure_metadata|information|documentation,EX15,True,True,True,1.000,1.000,1.000,0,4,False,True,,"According to the available information, for NIE assignment at the request of an interested party, the following documentation is needed:
+
+1. Application for Foreigner Identity Number (NIE) and Certificates (Form EX15)
+2...."
+14,Where can I apply for NIE assignment if I am abroad?,994354,where_to_apply,,,994354|994354|994354,where_to_apply|general|forms,EX15,True,True,True,1.000,0.333,1.000,0,3,False,False,,"You can apply for NIE assignment if you are abroad through the Spanish Consular Offices abroad.
+
+Sources:
+Title: Assignment of NIE at the request of interested party
+Section: Where can I process my application?
+Procedure..."
+15,What is the NIE assignment procedure code?,994354,procedure_metadata,,,994354|994614|994596,procedure_metadata|procedure_metadata|procedure_metadata,EX13|EX15|EX16,True,True,True,1.000,0.500,1.000,0,2,False,True,,"According to the context, the NIE assignment procedure code is 994354.
+
+Sources:
+Valencia, Spain - Procedure code for Assignment of NIE at the request of interested party: 994354."
+16,What is the validity of a registration certificate?,994596,duration_or_validity,,,994596|994694|993954,duration_or_validity|duration_or_validity|duration_or_validity,EX16|EX17,True,True,True,1.000,1.000,1.000,0,2,False,True,,"The registration certificate is valid for 1 year, renewable.
+
+Sources:
+Registration certificate - Period of validity - Procedure code: 994596
+Initial card or renewal residence or residence and work - Term of validity - P..."
+17,Who is eligible for the registration certificate procedure?,994596,stakeholders,,,994596|994596|994596,procedure_metadata|information|stakeholders,EX16,True,True,True,1.000,1.000,1.000,0,3,False,True,,"According to the context, the eligibility criteria for the registration certificate procedure is:
+
+A foreigner who cannot be documented by the authorities of any country and who wishes to be documented by Spain.
+
+Sources..."
+18,What documents are required for a registration certificate?,994596,documentation,EX16,,994596|994596|994596,documentation|procedure_metadata|general,EX16,True,True,True,0.667,0.333,1.000,0,3,True,False,,"According to the provided context, the documents required for a registration certificate are not explicitly listed. However, it is mentioned that the printed document must be renewed annually and its characteristics will..."
+19,Where do I file a registration certificate application?,994596,where_to_apply,,,994596|994694|993954,where_to_apply|where_to_apply|where_to_apply,EX16|EX17,True,True,True,1.000,1.000,1.000,0,4,False,True,,"To file a registration certificate application, you must submit it to any Foreigner Office or Police Station.
+
+Sources:
+Registration certificate - Where can I process my application? (994596) 
+https://sede.policia.gob.es..."
+20,What is the procedure code for registration certificate?,994596,procedure_metadata,,,994596|994694|994614,procedure_metadata|procedure_metadata|procedure_metadata,EX13|EX16|EX17,True,True,True,1.000,1.000,1.000,0,4,False,True,,"The procedure code for registration certificate is 994596.
+
+Sources:
+Registration certificate, Code of the procedure, 994596.
+Initial card or renewal residence or residence and work, Code of the procedure, 994694.
+Return..."
+21,What form is used for initial or renewal residence card?,994694,forms,EX17,,994694|994694|994694,procedure_metadata|duration_or_validity|forms,EX17,True,True,True,1.000,1.000,1.000,0,2,False,True,,"The form used for initial or renewal residence card is Form EX17.
+
+Sources:
+Initial card or renewal residence or residence and work -> Models of forms
+994694
+Application for Foreigner Identity Card (TIE) (Form EX17)
+EX17"
+22,Where can I process initial or renewal residence card?,994694,where_to_apply,,,994694|993954|994236,where_to_apply|where_to_apply|where_to_apply,EX17|EX29,True,True,True,1.000,1.000,1.000,0,3,False,True,,"To process an initial or renewal residence card, you can submit your application and accompanying documents to either:
+
+1. Immigration Offices (or Police Stations in some cases)
+
+Please refer to Source 1 for more informa..."
+23,What documents are needed for return authorization?,994614,documentation,EX13,,994614|994614|994596,documentation|requirements|documentation,EX13|EX16,True,True,True,1.000,1.000,1.000,0,4,False,True,,"According to the context, for Return Authorization, the following documents are needed:
+
+1. Form EX13 (Return Authorization Request Form)
+2. Proof of payment Tax model 790 Code 012.
+
+Sources:
+Title: Return authorization
+..."
+24,How long is return authorization valid?,994614,duration_or_validity,,,994614|994614|994596,duration_or_validity|requirements|duration_or_validity,EX13|EX16,True,True,True,1.000,0.000,1.000,0,2,False,False,,"The return authorization is valid for 90 days from the date it is granted.
+
+Sources:
+Return authorization - Section: Period of validity
+- Procedure code: 994614
+Registration certificate - Section: Period of validity 
+- P..."
+25,Where do I submit a return authorization request?,994614,where_to_apply,,,994614|994596|994694,where_to_apply|where_to_apply|where_to_apply,EX13|EX16|EX17,True,True,True,0.667,0.667,0.750,1,4,True,True,,"You can submit a return authorization request to any Aliens Office or Police Units.
+
+Sources:
+Return Authorization Request - Section: Where can I process my application? Procedure code: 994614
+https://sede.policia.gob.es..."
+26,Which form do I need for return authorization?,994614,forms,EX13,,994614|994614|994614,forms|procedure_metadata|requirements,EX13,True,True,True,1.000,0.667,1.000,0,2,False,True,,"To obtain a return authorization, you need to fill out Form EX13.
+
+Sources:
+Title: Return authorization
+Section: Models of forms
+Procedure code: 994614
+URL: https://sede.policia.gob.es/portalCiudadano/_ca-valencia/tramit..."

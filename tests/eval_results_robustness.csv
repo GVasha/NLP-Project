@@ -1,0 +1,32 @@
+id,question,expected_procedure_code,expected_section_type,expected_form_id,expected_behavior,retrieved_codes,retrieved_sections,retrieved_form_ids,hit_procedure_code,hit_section_type,hit_form_id,retrieval_keyword_coverage,answer_keyword_coverage,grounded_sentence_ratio,unsupported_claim_sentences,claim_sentences,detected_uncertainty,accuracy_pass,robustness_pass,answer_preview
+R1,What is the weather in Madrid tomorrow?,,,,uncertain,994236|994236|994694,requirements|documentation|stakeholders,EX17|EX29,True,True,True,1.000,1.000,0.667,1,3,False,True,False,"The information available in the context does not include weather forecasts. The provided sources discuss requirements and conditions for short-term stay extensions, documentation needed for entry into Spain, and who is ..."
+R2,Give me the phone number of the police station that handles NIE.,,,,uncertain,994354|994354|994694,where_to_apply|procedure_steps|where_to_apply,EX15|EX17,True,True,True,1.000,1.000,1.000,0,2,True,True,True,"The information is not available in the retrieved sources. The context only mentions Immigration Offices and Police Stations as options for submitting applications, but does not provide specific phone numbers for these l..."
+R3,Can you guarantee my application will be approved?,,,,uncertain,994596|994614|994614,where_to_apply|requirements|where_to_apply,EX13|EX16,True,True,True,1.000,1.000,1.000,0,5,False,True,False,"I can't guarantee your application will be approved. The information available in the retrieved sources indicates that you must submit your application to a Foreigner Office or Police Station, but it does not state that ..."
+R4,What documents do I need?,,,,uncertain,994694|994596|994694,information|documentation|documentation,EX16|EX17,True,True,True,1.000,1.000,1.000,0,5,False,True,False,"The required documents are not clearly stated in the context, but we can infer that:
+
+* A foreigner Identity Card (TIE) or a similar document (Form EX17) is necessary.
+* An application form is needed.
+* Proof of payment ..."
+R5,Is fee 790 code 099 used for these procedures?,,,,uncertain,994614|994596|994614,fees|fees|procedure_metadata,EX13|EX16,True,True,True,1.000,1.000,1.000,0,4,True,True,True,"According to the provided context, fee 790 code 012 (not 099) is used for procedures related to Registration certificate (Procedure code: 994596 and Title: Return authorization Procedure code: 994614). 
+
+Information is n..."
+R6,Can I apply online with no form and no passport?,,,,uncertain,994694|993954|994596,where_to_apply|where_to_apply|forms,EX16|EX17,True,True,True,1.000,1.000,1.000,0,3,True,True,True,"Unfortunately, the information is not available in the retrieved sources.
+
+Sources:
+1. Initial card or renewal residence or residence and work - Section: Where can I process my application? (994694)
+2. Student Card for F..."
+R7,Tell me the exact appointment URL for Barcelona office.,,,,uncertain,994596|994694|993954,where_to_apply|where_to_apply|where_to_apply,EX16|EX17,True,True,True,1.000,1.000,1.000,0,6,True,True,True,"I don't have enough information to determine which office in Barcelona is responsible for processing the application. 
+
+The provided context only mentions ""Foreigner Office"" (Source 1) and ""Immigration Offices"" (Source 2..."
+R8,What is fee 790 code 012 used for?,994236,fees,,answer,994614|994596|994694,fees|fees|fees,EX13|EX16|EX17,False,True,True,0.500,0.000,1.000,0,2,False,False,False,"According to the context, Fee 790 Code 012 is used for presenting an income document at banks, savings banks, or credit cooperatives.
+
+Sources:
+Title: Printed Tax Model
+Section: Fee, amount and place of payment
+Procedure..."
+R9,Where can I process my application?,,where_to_apply,,answer,994596|994694|994236,where_to_apply|where_to_apply|where_to_apply,EX16|EX17|EX29,True,True,True,1.000,0.500,0.500,1,2,False,True,True,"To process your application, you can submit it at a Foreigner Office or a Police Station. 
+
+Sources:
+Policía -> Ciudadano -> Tramites Extranjeria -> Tramite Asignacion NIE (994596)
+Policía -> Ciudadano -> Tramites Extran..."
+R10,What form is used for student card for foreigners?,993954,forms,EX17,answer,993954|993954|993954,forms|procedure_metadata|documentation,EX17,True,True,True,1.000,0.000,1.000,0,3,False,False,False,"The form used for a student card for foreigners is not explicitly stated in the provided context. However, it is mentioned that an ""Application form foreigner ID card"" is required for the Student Card for Foreigners proc..."
