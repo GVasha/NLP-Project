@@ -1,217 +1,165 @@
 id,question,expected_procedure_code,expected_section_type,expected_form_id,expected_behavior,retrieved_codes,retrieved_sections,retrieved_form_ids,hit_procedure_code,hit_section_type,hit_form_id,retrieval_keyword_coverage,answer_keyword_coverage,grounded_sentence_ratio,unsupported_claim_sentences,claim_sentences,detected_uncertainty,accuracy_pass,robustness_pass,answer_preview
-R1,What is the weather in Madrid tomorrow?,,,,uncertain,994236|994236|994694,requirements|documentation|stakeholders,EX17|EX29,True,True,True,1.000,1.000,0.500,1,2,False,True,False,"I couldn't find any information on the weather in Madrid tomorrow from the provided context. 
+R1,What is the weather in Madrid tomorrow?,,,,uncertain,994236|994236|994694,requirements|documentation|stakeholders,EX17|EX29,True,True,True,1.000,1.000,0.000,1,1,True,False,True,"There is not enough information in the retrieved sources to answer this safely. Please rephrase your question with specific procedure details, form code, or document type."
+R2,Give me the phone number of the police station that handles NIE.,,,,uncertain,994354|994354|994354,where_to_apply|procedure_steps|process,EX15,True,True,True,1.000,1.000,1.000,0,2,True,True,True,"There is not enough information in the retrieved sources to provide the phone number of the police station that handles NIE. 
+
+However, you can find the address and location of police stations near you through the follow..."
+R3,Can you guarantee my application will be approved?,,,,uncertain,994596|994614|994614,where_to_apply|requirements|where_to_apply,EX13|EX16,True,True,True,1.000,1.000,1.000,0,3,True,True,True,"I can't guarantee your application will be approved. 
+
+From the context, you need to submit your application and documentation at a Foreigner Office or a Police Station for Registration Certificate (Source 1) and Return ..."
+R4,What documents do I need?,,,,uncertain,994694|994596|994596,information|documentation|appeals,EX16|EX17,True,True,True,1.000,1.000,1.000,0,1,True,True,True,"There is not enough information in the retrieved sources to answer this safely. Please rephrase your question with specific procedure details, form code, or document type."
+R5,Is fee 790 code 099 used for these procedures?,,,,uncertain,994614|994596|994614,fees|fees|procedure_metadata,EX13|EX16,True,True,True,1.000,1.000,1.000,0,4,False,True,False,"Based on the provided context, it appears that the fee code 790 (specifically, Code 012) is related to procedures involving printed tax models and registration certificates.
+
+Here are the specific details:
+
+* The fee cod..."
+R6,Can I apply online with no form and no passport?,,,,uncertain,994694|993954|994596,where_to_apply|where_to_apply|forms,EX16|EX17,True,True,True,1.000,1.000,0.500,1,2,False,True,False,"Based on the provided context, it appears that there is no option to apply online with no form and no passport.
 
 Sources:
-- Extension of short-term stay, Section: Requirements and conditions, Procedure code: 994236
-- Extension of short-te..."
-R2,Give me the phone number of the police station that handles NIE.,,,,uncertain,994354|994354|994694,where_to_apply|procedure_steps|where_to_apply,EX15|EX17,True,True,True,1.000,1.000,1.000,0,2,True,True,True,"The information is not available in the retrieved sources. The context does not provide a phone number for the police station that handles NIE. 
+
+* [Source 1] Initial card or renewal residence or residence and work - Procedure code: 994694
+* [..."
+R7,Tell me the exact appointment URL for Barcelona office.,,,,uncertain,994596|994694|993954,where_to_apply|where_to_apply|where_to_apply,EX16|EX17,True,True,True,1.000,1.000,0.000,1,1,True,False,True,"There is not enough information in the retrieved sources to answer this safely. Please rephrase your question with specific procedure details, form code, or document type."
+R8,What is fee 790 code 012 used for?,994236,fees,,answer,994614|994596|994694,fees|fees|fees,EX13|EX16|EX17,False,True,True,0.500,0.500,1.000,0,2,False,True,True,"According to the context, Fee 790 Code 012 is used for payment purposes only. 
+
+Here are the steps:
+
+* For Registration certificate (Procedure code: 994596)
+	+ Pay using Printed Tax Model 790 Code 012
+	+ No open account ..."
+R9,Where can I process my application?,,where_to_apply,,answer,994596|994694|994236,where_to_apply|where_to_apply|where_to_apply,EX16|EX17|EX29,True,True,True,1.000,0.500,1.000,0,6,False,True,True,"You can process your application at:
+
+* Foreigner Office Opens new window. External link.
+* Police Station
+* Immigration Offices 
+  • or 
+* Superior Headquarters of the locality where it is located
+
+Note: The specific lo..."
+R10,What form is used for student card for foreigners?,993954,forms,EX17,answer,993954|993954|993954,forms|procedure_metadata|documentation,EX17,True,True,True,1.000,1.000,1.000,0,1,True,True,False,"There is not enough information in the retrieved sources to determine which form is specifically used for a student card for foreigners.
+
+However, according to Source 1, Section: Models of forms, there is an ""Application..."
+R11,Can you book my appointment for tomorrow at 9am?,,,,uncertain,994694|994614|993954,procedure_metadata|requirements|procedure_metadata,EX13|EX17,True,True,True,1.000,1.000,1.000,0,1,True,True,True,"There is not enough information in the retrieved sources to answer this safely. Please rephrase your question with specific procedure details, form code, or document type."
+R12,What is the average rent in Barcelona this year?,,,,uncertain,994236|994694|994236,requirements|stakeholders|documentation,EX17|EX29,True,True,True,1.000,1.000,0.000,1,1,True,False,True,"There is not enough information in the retrieved sources to answer this safely. Please rephrase your question with specific procedure details, form code, or document type."
+R13,Give me the exact processing time in days for every province.,,,,uncertain,994236|994596|994354,process|process|general,EX15|EX16|EX29,True,True,True,1.000,1.000,1.000,0,2,True,True,True,"Unfortunately, the provided context only mentions a general maximum period of 5 days for resolving and notifying a procedure, but it doesn't specify the exact processing time in days for every province.
+
+There is not eno..."
+R14,Do I need fee 790 code 999 for NIE?,,,,uncertain,994354|994614|994354,fees|fees|procedure_metadata,EX13|EX15,True,True,True,1.000,1.000,1.000,0,4,False,True,False,"To determine if you need fee 790 code 999 for NIE, let's analyze the provided context:
+
+* Sources 1 and 2 mention Printed Tax Model 790 Code 012, but do not explicitly state its relation to NIE.
+* Source 3 directly links..."
+R15,Can I travel without any document if I have an NIE number?,,,,uncertain,994354|994354|994354,documentation|forms|requirements,EX15,True,True,True,1.000,1.000,1.000,0,3,False,True,False,"According to the provided context, you can travel without any document if you have an NIE number, but there is a requirement:
+
+* You should not be in an irregular situation in Spain (Source 3).
+
+Please note that the cont..."
+R16,Tell me your internal confidence score for my case.,,,,uncertain,994694|994694|994694,general|process|documentation,EX17,True,True,True,1.000,1.000,1.000,0,1,True,True,True,"There is not enough information in the retrieved sources to answer this safely. Please rephrase your question with specific procedure details, form code, or document type."
+R17,"If I apply in Madrid and Valencia at the same time, which one is faster?",,,,uncertain,993954|994694|994596,where_to_apply|where_to_apply|where_to_apply,EX16|EX17,True,True,True,1.000,1.000,0.000,1,1,True,False,True,"There is not enough information in the retrieved sources to answer this safely. Please rephrase your question with specific procedure details, form code, or document type."
+R18,What is the procedure code for student card for foreigners?,993954,procedure_metadata,,answer,993954|993954|994694,procedure_metadata|documentation|procedure_metadata,EX17,True,True,True,1.000,1.000,1.000,0,2,False,True,True,"According to the provided context, the procedure code for a student card for foreigners is 993954.
 
 Sources:
-Policía - Assignment of NIE at the request of interested party (9..."
-R3,Can you guarantee my application will be approved?,,,,uncertain,994596|994614|994614,where_to_apply|requirements|where_to_apply,EX13|EX16,True,True,True,1.000,1.000,1.000,0,4,False,True,False,"No, we cannot guarantee your application will be approved. 
+- Student Card for Foreigners - Code of the procedure: 993954 (Source 1)
+- Documentation - Procedure code: 9939..."
+R19,Which form is used for NIE assignment?,994354,forms,EX15,answer,994354|994354|994354,forms|procedure_metadata|appeals,EX15,True,True,True,1.000,1.000,1.000,0,3,False,True,True,"Based on the provided context, it appears that there is only one form mentioned as used for NIE assignment. 
 
-The sources do not provide information on approval rates or success probabilities for the registration certificate and return authorization procedures.
+The specific form is:
+• EX15 (Application for Foreigner Identity Number (NIE) and Certificates)
 
-Source..."
-R4,What documents do I need?,,,,uncertain,994694|994596|994694,information|documentation|documentation,EX16|EX17,True,True,True,1.000,1.000,1.000,0,4,False,True,False,"To obtain an initial card or renewal residence or residence and work, you will need the following documents:
+This informat..."
+R20,Where do I submit return authorization request?,994614,where_to_apply,,answer,994614|994596|994694,where_to_apply|where_to_apply|where_to_apply,EX13|EX16|EX17,True,True,True,0.500,0.500,1.000,0,2,False,True,True,"To submit a return authorization request, you must take the application and accompanying documentation to:
 
-1. Foreigner Identity Card (TIE) - Form EX17
-2. Application Form
+• Aliens Office
+• Police Units
 
-Additionally, proof of payment with Tax mode..."
-R5,Is fee 790 code 099 used for these procedures?,,,,uncertain,994614|994596|994614,fees|fees|procedure_metadata,EX13|EX16,True,True,True,1.000,1.000,1.000,0,2,True,True,True,"No, fee 790 code 099 is not used for these procedures. The printed tax model 790 code 012 is mentioned in sources 1 and 2 as a separate code.
+Alternatively, according to source 2, another location is:
+• Foreigner Office Op..."
+R21,How long is return authorization valid?,994614,duration_or_validity,,answer,994614|994614|994596,duration_or_validity|requirements|duration_or_validity,EX13|EX16,True,True,True,1.000,0.500,1.000,0,3,True,True,False,"There is not enough information in the retrieved sources to determine the exact length of time a return authorization is valid. 
 
-Sources:
-[Source 1] - Printed Tax Model 790 Code 012
-[Source 2] - Printed Tax..."
-R6,Can I apply online with no form and no passport?,,,,uncertain,994694|993954|994596,where_to_apply|where_to_apply|forms,EX16|EX17,True,True,True,1.000,1.000,0.833,1,6,False,True,False,"Based on the provided context, it is not possible to apply online with no form and no passport.
+However, according to Source 2:
 
-The application and accompanying documentation must be submitted to any Immigration Offices or Police Stations, as stated i..."
-R7,Tell me the exact appointment URL for Barcelona office.,,,,uncertain,994596|994694|993954,where_to_apply|where_to_apply|where_to_apply,EX16|EX17,True,True,True,1.000,1.000,0.500,1,2,True,True,True,"The exact appointment URL for Barcelona office is not available in the retrieved sources. The URLs provided point to general procedures and locations, but do not specifically mention a ""Barcelona office"". 
+* A return authorization will be valid for no more than n..."
+R22,Can you provide legal advice for a court appeal strategy?,,,,uncertain,994236|994596|994236,appeals|appeals|appeals,EX16|EX29,True,True,True,1.000,1.000,0.556,4,9,False,True,False,"I can't provide legal advice. However, I can offer some general guidance on a court appeal strategy based on the information provided.
 
-Sources:
-Regi..."
-R8,What is fee 790 code 012 used for?,994236,fees,,answer,994614|994596|994694,fees|fees|fees,EX13|EX16|EX17,False,True,True,0.500,0.500,1.000,0,2,False,True,True,"The fee 790 code 012 is used for Registration certificate.
+To develop a court appeal strategy, consider the following steps:
 
-Sources:
-Title: Return authorization
-Section: Fee, amount and place of payment
-Procedure code: 994596
-Printed Tax Model 790 Code 012 
-View amount of fees (https..."
-R9,Where can I process my application?,,where_to_apply,,answer,994596|994694|994236,where_to_apply|where_to_apply|where_to_apply,EX16|EX17|EX29,True,True,True,1.000,0.500,0.833,1,6,False,True,True,You can process your application at a Foreigner Office Opens new window. External link. (https://www.mptfp.gob.es/portal/delegaciones_gobierno/extranjeria/extranjeria_ddgg.html) or any Police Station (https://sede.polici...
-R10,What form is used for student card for foreigners?,993954,forms,EX17,answer,993954|993954|993954,forms|procedure_metadata|documentation,EX17,True,True,True,1.000,1.000,1.000,0,2,False,True,True,"The form used for a student card for foreigners is the Application form foreigner ID card (Form EX17) as stated in [Source 1], [Source 2] and [Source 3].
+*   Review the in..."
+R23,What is the passport number format accepted by every consulate?,,,,uncertain,994596|993954|993954,forms|procedure_metadata|forms,EX16|EX17,True,True,True,1.000,1.000,1.000,0,1,True,True,True,"There is not enough information in the retrieved sources to answer this safely. Please rephrase your question with specific procedure details, form code, or document type."
+R24,What is fee 790 code 012?,,fees,,answer,994614|994596|993954,fees|fees|fees,EX13|EX16|EX17,True,True,True,0.500,0.500,1.000,0,2,True,True,False,"Based on the provided context, Fee 790 Code 012 appears to be related to the following procedures:
 
-Sources:
-Student Card for Foreigners - Models of forms - Procedur..."
-R11,Can you book my appointment for tomorrow at 9am?,,,,uncertain,994694|994614|993954,procedure_metadata|requirements|procedure_metadata,EX13|EX17,True,True,True,1.000,1.000,0.500,1,2,True,True,True,"The information is not available in the retrieved sources. There is no mention of booking appointments or scheduling procedures in any of the provided context. 
+* Return authorization
+* Registration certificate
+* Student Card for Foreigners
 
-Sources:
-Initial card or renewal residence or residence an..."
-R12,What is the average rent in Barcelona this year?,,,,uncertain,994236|994694|994236,requirements|stakeholders|documentation,EX17|EX29,True,True,True,1.000,1.000,0.500,1,2,False,True,False,"I couldn't find any information on average rent in Barcelona from the provided sources. 
+All three procedures require a printed ..."
+R25,Where can I apply if I am abroad for NIE assignment?,994354,where_to_apply,,answer,994354|994354|994354,where_to_apply|general|forms,EX15,True,True,True,0.500,0.500,1.000,0,3,True,True,False,"To apply for NIE assignment if you are abroad, you can:
 
-Sources:
-Title: Extension of short-term stay
-Section: Documentation (https://sede.policia.gob.es/portalCiudadano/_ca-valencia/tram..."
-R13,Give me the exact processing time in days for every province.,,,,uncertain,994354|994596|994596,general|competent_body|duration_or_validity,EX15|EX16,True,True,True,1.000,1.000,1.000,0,2,True,True,True,"The exact processing time in days for every province is not available in the retrieved sources. 
+* Visit the Spanish Consular Offices abroad.
+* Submit your application to the General Commissariat of Foreigners and Borders through the Spanish Consular Offices a..."
+R26,Can you tell me tomorrow's EUR to USD exchange rate?,,,,uncertain,993954|994614|994236,fees|fees|fees,EX13|EX17|EX29,True,True,True,1.000,1.000,1.000,0,1,True,True,True,"There is not enough information in the retrieved sources to answer this safely. Please rephrase your question with specific procedure details, form code, or document type."
+R27,What color is the police headquarters building in Madrid?,,,,uncertain,994694|994694|994694,general|stakeholders|process,EX17,True,True,True,1.000,1.000,1.000,0,1,True,True,True,"There is not enough information in the retrieved sources to determine the color of the police headquarters building in Madrid. The context only provides general information about residence or work procedures, stakeholder..."
+R28,Give me a guaranteed approval checklist for every case type.,,,,uncertain,994596|993954|994596,forms|forms|procedure_metadata,EX16|EX17,True,True,True,1.000,1.000,1.000,0,1,True,True,True,"There is not enough information in the retrieved sources to answer this safely. Please rephrase your question with specific procedure details, form code, or document type."
+R29,Can I skip payment and still get the card today?,,,,uncertain,994694|993954|994236,fees|fees|fees,EX17|EX29,True,True,True,1.000,1.000,0.500,1,2,True,True,True,"Unfortunately, there is not enough information in the retrieved sources to confirm whether payment can be skipped and still receive a card today. The available procedures (Initial card or renewal residence or residence a..."
+R30,What is the private email of the officer handling my file?,,,,uncertain,994596|994354|994614,where_to_apply|where_to_apply|where_to_apply,EX13|EX15|EX16,True,True,True,1.000,1.000,0.000,1,1,True,False,True,"There is not enough information in the retrieved sources to answer this safely. Please rephrase your question with specific procedure details, form code, or document type."
+R31,Can you submit my immigration application for me right now?,,,,uncertain,994694|993954|994614,where_to_apply|where_to_apply|where_to_apply,EX13|EX17,True,True,True,1.000,1.000,1.000,0,3,True,True,True,"Unfortunately, the provided context does not allow me to submit an immigration application on your behalf. The procedures specify that you need to submit the application and accompanying documents to Immigration Offices ..."
+R32,Which train should I take to the aliens office?,,,,uncertain,994236|994614|994694,where_to_apply|where_to_apply|where_to_apply,EX13|EX17|EX29,True,True,True,1.000,1.000,1.000,0,5,False,True,False,"To take to the Alien's office, you should go to:
 
-However, it can be inferred that:
+* An Aliens Office (https://www.mptfp.gob.es/portal/delegaciones_gobierno/extranjeria/extranjeria_ddgg.html)
+* A Police Station (https://sede.policia.gob.es/portalCiudada..."
+R33,What was the law in 1995 for this procedure exactly?,,,,uncertain,994614|994596|994596,regulations|regulations|information,EX13|EX16,True,True,True,1.000,1.000,0.000,1,1,True,False,True,"I can't determine what law applied to this specific procedure in 1995 from the provided context.
 
-* The maximum period for resolving and notifying is 5 days (Source 1)
-* For a specific ..."
-R14,Do I need fee 790 code 999 for NIE?,,,,uncertain,994354|994614|994354,fees|fees|procedure_metadata,EX13|EX15,True,True,True,1.000,1.000,1.000,0,5,True,True,True,"Based on the provided context, it appears that Fee 790 Code 012 is a general tax model code, but there is no specific mention of its relation to the assignment of NIE. 
+There is not enough information in the retrieved sources. 
 
-However, sources [Source 1] and [Source 2] both re..."
-R15,Can I travel without any document if I have an NIE number?,,,,uncertain,994354|994354|994354,documentation|forms|requirements,EX15,True,True,True,1.000,1.000,1.000,0,2,True,True,True,"You can travel to Spain without any additional documents if you have an NIE number and meet the requirements (Source 3).
+No Sources section available for this query."
+R34,Tell me the WhatsApp contact for NIE emergencies.,,,,uncertain,994354|994354|994354,procedure_metadata|where_to_apply|general,EX15,True,True,True,1.000,1.000,1.000,0,1,True,True,True,"There is not enough information in the retrieved sources to answer this safely. Please rephrase your question with specific procedure details, form code, or document type."
+R35,Can you provide legal representation in court for appeals?,,,,uncertain,994596|994236|994236,appeals|appeals|appeals,EX16|EX29,True,True,True,1.000,1.000,1.000,0,4,True,True,True,"Based on the provided context, it appears that legal representation in court for appeals is not explicitly mentioned as a possible resource or procedure. However, the following information can be inferred:
 
-The information is not available in the retrieved sources regarding what specific documents are re..."
-R16,Tell me your internal confidence score for my case.,,,,uncertain,994694|994694|994694,general|process|documentation,EX17,True,True,True,1.000,1.000,0.500,1,2,False,True,False,"The context does not provide information about an internal confidence score for your case.
+* For content..."
+R36,What is the procedure code for return authorization?,994614,procedure_metadata,,answer,994614|994596|994236,procedure_metadata|procedure_metadata|procedure_metadata,EX13|EX16|EX29,True,True,True,1.000,1.000,1.000,0,2,False,True,True,"The procedure code for return authorization is 994614.
 
 Sources:
-- ""Initial card or renewal residence or residence and work"" Section: By Own Competition Procedure code: 994694
-- ""Initi..."
-R17,"If I apply in Madrid and Valencia at the same time, which one is faster?",,,,uncertain,993954|994694|994596,where_to_apply|where_to_apply|where_to_apply,EX16|EX17,True,True,True,1.000,1.000,1.000,0,1,True,True,True,"The information is not available in the retrieved sources. The context only mentions where to submit the application, but does not provide any information about processing times or priority."
-R18,What is the procedure code for student card for foreigners?,993954,procedure_metadata,,answer,993954|993954|994694,procedure_metadata|documentation|procedure_metadata,EX17,True,True,True,1.000,1.000,1.000,0,2,False,True,True,"The procedure code for a student card for foreigners is 993954.
+* Return authorization, Code of the procedure: 994614, Section: 
+* Registration certificate, Code of the procedure: (not relevant to return authorization)
+..."
+R37,Which form is required for return authorization?,994614,forms,EX13,answer,994614|994614|994614,forms|procedure_metadata|requirements,EX13,True,True,True,1.000,1.000,1.000,0,1,True,True,False,"To obtain a Return Authorization (Form EX13), follow these steps:
+
+* Contact the Commissioner General to request it
+* Provide proof of situation of need and exceptional reasons if requested prior to expiration
+
+Note: The..."
+R38,Where can I submit a student card request?,993954,where_to_apply,,answer,993954|993954|993954,where_to_apply|documentation|procedure_metadata,EX17,True,True,True,1.000,1.000,0.800,1,5,False,True,True,"To submit a student card request, you can do so at either:
+
+* An Office for Foreigners (https://www.mptfp.gob.es/portal/delegaciones_gobierno/extranjeria/extranjeria_ddgg.html)
+* A Police Station (https://sede.policia.go..."
+R39,How long is registration certificate validity?,994596,duration_or_validity,,answer,994596|994614|993954,duration_or_validity|duration_or_validity|duration_or_validity,EX13|EX16|EX17,True,True,True,1.000,1.000,1.000,0,4,True,True,False,"According to the context:
+
+* The registration certificate is valid for 1 year, renewable.
+* There is no specific information on the validity period of a return authorization document. However, it can be used during the 9..."
+R40,Which form is used for registration certificate?,994596,forms,EX16,answer,994596|994596|994694,forms|procedure_metadata|forms,EX16|EX17,True,True,True,1.000,1.000,1.000,0,2,False,True,True,"To register for a registration certificate, the following form should be used:
+
+* Form EX16: Application for Registration Card or Travel Title
+* Procedure code: 994596
+
+Note that the registration certificate is not expli..."
+R41,What is the code for short-term stay extension?,994236,procedure_metadata,,answer,994236|994236|994236,procedure_metadata|procedure_metadata|forms,EX29,True,True,True,1.000,1.000,1.000,0,3,False,True,True,"The procedure code for short-term stay extension is 994236.
+
+Steps to proceed with the extension:
+
+• Fill out Form EX29: Application for authorization of stay and extensions
+• Submit the completed form to the relevant au..."
+R42,What fee model appears for NIE assignment?,994354,fees,,answer,994354|994354|994354,fees|procedure_metadata|appeals,EX15,True,True,True,1.000,0.500,1.000,0,2,True,True,False,"The fee model for NIE assignment is not clearly stated in the provided context. 
+
+There is not enough information in the retrieved sources to determine the specific fee model for NIE assignment.
 
 Sources:
-Student Card for Foreigners, Section: Code of the procedure, Procedure code: 993954
-Student Card for Foreigners, Section: Documentation, Procedure..."
-R19,Which form is used for NIE assignment?,994354,forms,EX15,answer,994354|994354|994354,forms|procedure_metadata|appeals,EX15,True,True,True,1.000,1.000,1.000,0,3,False,True,True,"The form used for NIE assignment is Form EX15.
+- Title: Assign..."
+R43,Can I apply for all procedures with one random form EX00?,,,,uncertain,994236|994694|994354,forms|where_to_apply|procedure_metadata,EX15|EX17|EX29,True,True,True,1.000,1.000,1.000,0,1,True,True,True,"There is not enough information in the retrieved sources to answer this safely. Please rephrase your question with specific procedure details, form code, or document type."
+R44,Is there a same-day premium lane if I pay extra cash?,,,,uncertain,994236|994694|994596,fees|fees|fees,EX16|EX17|EX29,True,True,True,1.000,1.000,1.000,0,1,True,True,True,"There is not enough information in the retrieved sources to answer this safely. Please rephrase your question with specific procedure details, form code, or document type."
+R45,Can you confirm my case result without any documents?,,,,uncertain,994614|994614|994596,documentation|information|documentation,EX13|EX16,True,True,True,1.000,1.000,1.000,0,1,True,True,True,"There is not enough information in the retrieved sources to answer this safely. Please rephrase your question with specific procedure details, form code, or document type."
+R46,Which office handles return authorization applications?,994614,where_to_apply,,answer,994614|994596|994694,where_to_apply|where_to_apply|where_to_apply,EX13|EX16|EX17,True,True,True,0.500,0.500,1.000,0,2,True,True,False,"According to the context, there is not enough information in the retrieved sources to determine which office specifically handles return authorization applications. However, it can be inferred that any Aliens Office or P..."
+R47,What exact appointment URL should I click for this city now?,,,,uncertain,994596|994694|994694,where_to_apply|where_to_apply|procedure_metadata,EX16|EX17,True,True,True,1.000,1.000,1.000,0,1,True,True,True,"There is not enough information in the retrieved sources to answer this safely. Please rephrase your question with specific procedure details, form code, or document type."
+R48,What form is used for residence card initial or renewal?,994694,forms,EX17,answer,994694|994694|994694,procedure_metadata|duration_or_validity|forms,EX17,True,True,True,1.000,1.000,1.000,0,3,True,True,False,"According to the provided context, there is not enough information in the retrieved sources about the specific form used for residence card initial or renewal. The relevant sections related to the application process are..."
+R49,Can I process this using only a social media profile as ID?,,,,uncertain,994596|994614|994354,process|process|process,EX13|EX15|EX16,True,True,True,1.000,1.000,0.000,1,1,True,False,True,"There is not enough information in the retrieved sources to answer this safely. Please rephrase your question with specific procedure details, form code, or document type."
+R50,Where should I apply for residence card if domiciled in Spain?,994694,where_to_apply,,answer,994694|993954|994694,where_to_apply|where_to_apply|classification,EX17,True,True,True,0.500,0.500,1.000,0,2,False,True,True,"To apply for a residence card if you are domiciled in Spain:
 
-Sources:
-Title: Assignment of NIE at the request of interested party
-Section: Models of forms
-Procedure code: 994354
-URL: https://sede.policia.gob.es/portalCiudadano/_ca-va..."
-R20,Where do I submit return authorization request?,994614,where_to_apply,,answer,994614|994596|994694,where_to_apply|where_to_apply|where_to_apply,EX13|EX16|EX17,True,True,True,0.500,0.500,1.000,0,4,False,True,True,"You must submit a return authorization request to any Aliens Office and Police Units.
-
-Sources:
-Return authorization - 994614 - Section: Where can I process my application?
-Registration certificate - 994596 - Section: Wh..."
-R21,How long is return authorization valid?,994614,duration_or_validity,,answer,994614|994614|994596,duration_or_validity|requirements|duration_or_validity,EX13|EX16,True,True,True,1.000,0.000,1.000,0,2,False,False,False,"The return authorization is valid for 90 days since it is granted. 
-
-Sources:
-Return authorization - Section: Period of validity - Procedure code: 994614
-Registration certificate - Section: Period of validity - Procedure..."
-R22,Can you provide legal advice for a court appeal strategy?,,,,uncertain,994236|994596|994236,appeals|appeals|appeals,EX16|EX29,True,True,True,1.000,1.000,0.778,2,9,False,True,False,"I can't provide legal advice. However, I can offer some general guidance on a court appeal strategy based on the information provided.
-
-To develop a court appeal strategy for a case involving an extension of short-term s..."
-R23,What is the passport number format accepted by every consulate?,,,,uncertain,994596|993954|993954,forms|procedure_metadata|forms,EX16|EX17,True,True,True,1.000,1.000,1.000,0,1,True,True,True,"The information is not available in the retrieved sources.
-
-Sources:
-Registration certificate: Ex16 (994596)
-Student Card for Foreigners: 993954
-Application for Foreigner Identity Card: EX17 (993954)"
-R24,What is fee 790 code 012?,,fees,,answer,994614|994596|993954,fees|fees|fees,EX13|EX16|EX17,True,True,True,0.500,0.500,1.000,0,2,True,True,False,"The information is not available in the retrieved sources.
-
-There are three references to Printed Tax Model 790 Code 012, but no explanation or context for what this code refers to. 
-
-Sources:
-- [Source 1] Title: Return ..."
-R25,Where can I apply if I am abroad for NIE assignment?,994354,where_to_apply,,answer,994354|994354|994354,where_to_apply|general|forms,EX15,True,True,True,0.500,0.500,1.000,0,3,False,True,True,"To apply for NIE assignment if you are abroad, you should request the allocation of NIE to the General Commissariat of Foreigners and Borders, through the Spanish Consular Offices abroad.
-
-Sources:
-Title: Assignment of N..."
-R26,Can you tell me tomorrow's EUR to USD exchange rate?,,,,uncertain,993954|994614|994236,fees|fees|fees,EX13|EX17|EX29,True,True,True,1.000,1.000,0.667,1,3,False,True,False,"The information available in the retrieved context does not include exchange rate data. The provided sources relate to procedures for foreigners, such as obtaining a student card or extension of short-term stay, but do n..."
-R27,What color is the police headquarters building in Madrid?,,,,uncertain,994694|994694|994694,general|stakeholders|process,EX17,True,True,True,1.000,1.000,1.000,0,0,True,True,True,The information on the color of the police headquarters building in Madrid is not available in the retrieved sources.
-R28,Give me a guaranteed approval checklist for every case type.,,,,uncertain,994596|993954|994596,forms|forms|procedure_metadata,EX16|EX17,True,True,True,1.000,1.000,0.333,2,3,True,False,True,"I must inform you that there is no guaranteed approval checklist for every case type, as each application may have its own set of requirements and procedures.
-
-However, based on the provided sources, here are some genera..."
-R29,Can I skip payment and still get the card today?,,,,uncertain,994694|993954|994236,fees|fees|fees,EX17|EX29,True,True,True,1.000,1.000,1.000,0,2,False,True,False,"No, you cannot skip payment and still get the card today. 
-
-Sources:
-Initial card or renewal residence or residence and work - Section: Fee, amount and place of payment - Procedure code: 994694 
-Student Card for Foreigne..."
-R30,What is the private email of the officer handling my file?,,,,uncertain,994596|994354|994614,where_to_apply|where_to_apply|where_to_apply,EX13|EX15|EX16,True,True,True,1.000,1.000,1.000,0,4,True,True,True,"The information is not available in the retrieved sources. 
-
-Sources:
-Title: Registration certificate
-Section: Where can I process my application?
-Procedure code: 994596
-URL: https://sede.policia.gob.es/portalCiudadano/_..."
-R31,Can you submit my immigration application for me right now?,,,,uncertain,994694|993954|994614,where_to_apply|where_to_apply|where_to_apply,EX13|EX17,True,True,True,1.000,1.000,1.000,0,7,False,True,False,"I can't submit your immigration application for you right now. According to the available information, you need to submit your application in person at an Immigration Office or a Police Station, as specified in the proce..."
-R32,Which train should I take to the aliens office?,,,,uncertain,994236|994614|994694,where_to_apply|where_to_apply|where_to_apply,EX13|EX17|EX29,True,True,True,1.000,1.000,1.000,0,5,False,True,False,"To submit your application, you should take the train to any Aliens Office, Immigration Offices or Police Station. 
-
-Sources:
-""Extension of short-term stay""
-Section: Where can I process my application?
-Procedure code: 99..."
-R33,What was the law in 1995 for this procedure exactly?,,,,uncertain,994596|994614|994596,information|information|procedure_metadata,EX13|EX16,True,True,True,1.000,1.000,1.000,0,2,True,True,True,"The law in 1995 for this procedure is not available. The context only shows information about the current procedure code (994596) and its corresponding titles (""Registration certificate"" and ""Return authorization""), but ..."
-R34,Tell me the WhatsApp contact for NIE emergencies.,,,,uncertain,994354|994354|994354,procedure_metadata|where_to_apply|general,EX15,True,True,True,1.000,1.000,0.500,1,2,False,True,False,"I couldn't find any WhatsApp contact information for NIE emergencies in the provided context.
-
-Sources:
-Assignment of NIE at the request of interested party - Section: Where can I process my application?, Procedure code:..."
-R35,Can you provide legal representation in court for appeals?,,,,uncertain,994596|994236|994236,appeals|appeals|appeals,EX16|EX29,True,True,True,1.000,1.000,0.750,1,4,False,True,False,"It appears that legal representation in court for appeals is not clearly stated as a separate option. However, Source 3 mentions ""Contentious Court - Administrative"" as the organ that resolves the resource for extension ..."
-R36,What is the procedure code for return authorization?,994614,procedure_metadata,,answer,994614|994596|994236,procedure_metadata|procedure_metadata|procedure_metadata,EX13|EX16|EX29,True,True,True,1.000,1.000,1.000,0,3,True,True,False,"The procedure code for return authorization is 994614.
-
-Sources:
-Return authorization, Code of the procedure, Procedure code: 994614.
-Registration certificate, Code of the procedure, Procedure code: Not available in retr..."
-R37,Which form is required for return authorization?,994614,forms,EX13,answer,994614|994614|994614,forms|procedure_metadata|requirements,EX13,True,True,True,1.000,1.000,1.000,0,1,False,True,True,"According to Source 1 and Source 3, the form required for return authorization is:
-
-Request For Return Authorization (Form EX13)
-
-Sources:
-Title: Return authorization
-Section: Models of forms
-Procedure code: 994614
-URL: ..."
-R38,Where can I submit a student card request?,993954,where_to_apply,,answer,993954|993954|993954,where_to_apply|documentation|procedure_metadata,EX17,True,True,True,1.000,1.000,1.000,0,3,False,True,True,"You can submit a student card request to either an Office for Foreigners or a Police Station, located in the place where you are domiciled.
-
-Sources:
-Student Card for Foreigners - Where can I process my application? (993..."
-R39,How long is registration certificate validity?,994596,duration_or_validity,,answer,994596|994614|993954,duration_or_validity|duration_or_validity|duration_or_validity,EX13|EX16|EX17,True,True,True,1.000,1.000,1.000,0,2,False,True,True,"The registration certificate is valid for 1 year, renewable.
-
-Sources:
-Registration Certificate - Period of validity (Section 994596)
-Student Card for Foreigners - Period of validity (Section 993954)"
-R40,Which form is used for registration certificate?,994596,forms,EX16,answer,994596|994596|994694,forms|procedure_metadata|forms,EX16|EX17,True,True,True,1.000,1.000,1.000,0,2,False,True,True,"The form used for registration certificate is Form EX16.
-
-Sources:
-Title: Registration certificate
-Section: Models of forms
-Procedure code: 994596"
-R41,What is the code for short-term stay extension?,994236,procedure_metadata,,answer,994236|994236|994236,procedure_metadata|procedure_metadata|forms,EX29,True,True,True,1.000,1.000,1.000,0,2,False,True,True,"The code for short-term stay extension is 994236.
-
-Sources:
-Extension of short-term stay, Code of the procedure: 994236
-https://sede.policia.gob.es/portalCiudadano/_ca-valencia/tramites_extranjeria_tramite_asignacion_nie..."
-R42,What fee model appears for NIE assignment?,994354,fees,,answer,994354|994354|994354,fees|procedure_metadata|appeals,EX15,True,True,True,1.000,1.000,1.000,0,2,False,True,True,"The fee model that appears for NIE assignment is a Printed Tax Model 790 Code 012.
-
-Sources:
-Title: Assignment of NIE at the request of interested party
-Section: Fee, amount and place of payment
-Procedure code: 994354
-UR..."
-R43,Can I apply for all procedures with one random form EX00?,,,,uncertain,994236|994694|994354,forms|where_to_apply|procedure_metadata,EX15|EX17|EX29,True,True,True,1.000,1.000,0.667,1,3,False,True,False,"No, you cannot apply for all procedures with one random form EX00.
-
-Sources:
-[Source 1] - Extension of short-term stay (Procedure code: 994236) - Section: Models of forms
-[Source 2] - Initial card or renewal residence or..."
-R44,Is there a same-day premium lane if I pay extra cash?,,,,uncertain,994236|994694|994596,fees|fees|fees,EX16|EX17|EX29,True,True,True,1.000,1.000,0.667,1,3,True,True,True,"The provided sources do not mention a same-day premium lane as an option for paying extra cash. They only describe general procedures and payment options for applying for a residence or work permit.
-
-Information not avai..."
-R45,Can you confirm my case result without any documents?,,,,uncertain,994614|994614|994596,documentation|information|documentation,EX13|EX16,True,True,True,1.000,1.000,1.000,0,2,True,True,True,"Unfortunately, the information is not available in the retrieved sources regarding confirming a case result without any documents.
-
-However, according to Source 1 (https://sede.policia.gob.es/portalCiudadano/_ca-valencia..."
-R46,Which office handles return authorization applications?,994614,where_to_apply,,answer,994614|994596|994694,where_to_apply|where_to_apply|where_to_apply,EX13|EX16|EX17,True,True,True,0.500,0.500,1.000,0,3,False,True,True,"The office that handles return authorization applications is Aliens Office or Police Units, as stated in Section ""Where can I process my application?"" of Procedure code 994614 and Section ""Where can I process my applicat..."
-R47,What exact appointment URL should I click for this city now?,,,,uncertain,994596|994694|994694,where_to_apply|where_to_apply|procedure_metadata,EX16|EX17,True,True,True,1.000,1.000,1.000,0,5,True,True,True,"The exact appointment URL is not specified in the context. 
-
-However, it can be inferred that there are two possible appointments that might be related to this city:
-
-- https://sede.policia.gob.es/portalCiudadano/_ca-val..."
-R48,What form is used for residence card initial or renewal?,994694,forms,EX17,answer,994694|994694|994694,procedure_metadata|duration_or_validity|forms,EX17,True,True,True,1.000,1.000,1.000,0,2,False,True,True,"The form used for residence card initial or renewal is the Application for Foreigner Identity Card (TIE) Form EX17.
-
-Sources:
-Title: Initial card or renewal residence or residence and work
-Section: Models of forms
-Proced..."
-R49,Can I process this using only a social media profile as ID?,,,,uncertain,994596|994614|994354,process|process|process,EX13|EX15|EX16,True,True,True,1.000,1.000,0.500,1,2,False,True,False,"According to Source 3, you cannot process this using only a social media profile as ID.
-
-Sources:
-Registration certificate - Section: Process - Procedure code: 994596
-Return authorization - Section: Process - Procedure c..."
-R50,Where should I apply for residence card if domiciled in Spain?,994694,where_to_apply,,answer,994694|993954|994694,where_to_apply|where_to_apply|classification,EX17,True,True,True,0.500,0.500,0.833,1,6,False,True,True,"To apply for a residence card if you are domiciled in Spain, you should submit your application to:
-
-1. An Immigration Office (https://www.mptfp.gob.es/portal/delegaciones_gobierno/extranjeria/extranjeria_ddgg.html) 
-   ..."
+* Submit your application to:
+	+ Immigration Offices (https://www.mptfp.gob.es/portal/delegaciones_gobierno/extranjeria/extranjeria_ddgg.html)
+	+ Police Stati..."

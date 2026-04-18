@@ -39,6 +39,18 @@ def detect_intents(query: str) -> Set[str]:
     if any(x in q for x in ["how long", "validity", "duration", "renewable"]):
         intents.add("duration_or_validity")
 
+    if any(x in q for x in ["appeal", "appeals", "resource", "recurso", "challenge decision"]):
+        intents.add("appeals")
+
+    if any(x in q for x in ["competent body", "who decides", "who resolves", "authority resolves"]):
+        intents.add("competent_body")
+
+    if any(x in q for x in ["regulation", "regulations", "legal basis", "law", "normative"]):
+        intents.add("regulations")
+
+    if any(x in q for x in ["process", "workflow", "steps", "how is it processed"]):
+        intents.add("process")
+
     return intents
 
 
@@ -88,6 +100,14 @@ def score_result(query: str, doc, rank_index: int = 0) -> int:
         score += 4
     if "duration_or_validity" in intents and section_type == "duration_or_validity":
         score += 6
+    if "appeals" in intents and section_type == "appeals":
+        score += 8
+    if "competent_body" in intents and section_type == "competent_body":
+        score += 8
+    if "regulations" in intents and section_type == "regulations":
+        score += 7
+    if "process" in intents and section_type == "process":
+        score += 7
 
     if "nie" in q and "nie" in title:
         score += 4
@@ -105,8 +125,19 @@ def score_result(query: str, doc, rank_index: int = 0) -> int:
     if "procedure_steps" in intents and section_type == "requirements":
         score -= 3
 
-    if section_type in {"appeals", "regulations", "classification", "competent_body", "process"}:
+    if section_type in {"classification"}:
         score -= 1
+
+    # Penalize only when intent is specific and the section mismatches that intent.
+    if "appeals" in intents and section_type != "appeals":
+        score -= 2
+    if "competent_body" in intents and section_type != "competent_body":
+        score -= 2
+    if "regulations" in intents and section_type != "regulations":
+        score -= 2
+    if "process" in intents and section_type != "process":
+        score -= 2
+
     if section_type == "procedure_metadata":
         score -= 1
 
