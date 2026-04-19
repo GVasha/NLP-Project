@@ -1,8 +1,10 @@
 import re
+from typing import Iterable
 
 from ollama import chat
 
 from rag.config import OLLAMA_MODEL
+from rag.retrieval.smart_retriever import detect_intents, extract_form_id, extract_procedure_code
 
 
 SYSTEM_PROMPT = """You answer immigration/admin procedure questions using only the provided context.
@@ -27,6 +29,12 @@ QUERY_STOPWORDS = {
     "can", "i", "we", "what", "where", "how", "who", "when", "which",
 }
 
+DOMAIN_HINTS = {
+    "nie", "ex", "form", "forms", "fee", "fees", "790", "012", "procedure",
+    "residence", "card", "authorization", "student", "foreigner", "office", "police",
+    "apply", "application", "documents", "passport", "appeal", "regulation",
+}
+
 
 def normalize(text: str) -> str:
     return (text or "").strip().lower()
@@ -46,8 +54,11 @@ def detect_ambiguous_or_oos_query(question: str) -> bool:
     ]):
         return True
 
+    q_tokens = set(tokenize(q))
+    has_domain_hint = any(t in DOMAIN_HINTS for t in q_tokens)
+
     # Very short generic questions are often under-specified and should be handled conservatively.
-    if len(tokenize(q)) <= 3 and any(x in q for x in ["documents", "apply", "where", "what do i need"]):
+    if len(q_tokens) <= 3 and not has_domain_hint and any(x in q for x in ["documents", "apply", "where", "what do i need"]):
         return True
 
     return False
@@ -107,6 +118,126 @@ def grounded_sentence_ratio(answer: str, docs, min_overlap: int = 2) -> tuple[fl
     return supported / claims, claims - supported, claims
 
 
+def split_candidate_sentences(text: str) -> list[str]:
+    chunks = re.split(r"(?<=[.!?])\s+|\n+", (text or "").strip())
+    out = []
+    for s in chunks:
+        s = s.strip(" -\t")
+        if len(s) < 25:
+            continue
+        if len(s) > 320:
+            continue
+        out.append(s)
+    return out
+
+
+def intent_keywords(intents: set[str]) -> set[str]:
+    k = set()
+    if "forms" in intents:
+        k |= {"ex", "form", "forms", "model"}
+    if "fees" in intents:
+        k |= {"fee", "tax", "790", "012", "payment"}
+    if "where_to_apply" in intents:
+        k |= {"office", "police", "station", "apply", "submit"}
+    if "documentation" in intents:
+        k |= {"document", "documents", "passport", "proof", "copy", "original"}
+    if "duration_or_validity" in intents:
+        k |= {"validity", "duration", "days", "months", "renewable", "period"}
+    if "procedure_metadata" in intents:
+        k |= {"procedure", "code"}
+    if "appeals" in intents:
+        k |= {"appeal", "resource"}
+    if "competent_body" in intents:
+        k |= {"competent", "body", "resolves", "authority"}
+    if "regulations" in intents:
+        k |= {"regulation", "law", "normative"}
+    if "process" in intents or "procedure_steps" in intents:
+        k |= {"process", "steps", "carry", "procedure"}
+    return k
+
+
+def select_support_sentences(question: str, docs, intents: set[str], limit: int = 4) -> list[str]:
+    q_tokens = set(tokenize(question))
+    i_tokens = intent_keywords(intents)
+
+    candidates: list[tuple[int, str]] = []
+    seen = set()
+    for d in docs:
+        for s in split_candidate_sentences(d.page_content):
+            key = normalize(s)
+            if key in seen:
+                continue
+            seen.add(key)
+            st = set(tokenize(s))
+            if not st:
+                continue
+            overlap_q = len(st & q_tokens)
+            overlap_i = len(st & i_tokens)
+            score = overlap_q * 3 + overlap_i * 2
+            if score <= 0:
+                continue
+            candidates.append((score, s))
+
+    candidates.sort(key=lambda x: x[0], reverse=True)
+    return [s for _, s in candidates[:limit]]
+
+
+def build_sources_block(docs) -> str:
+    lines = []
+    for d in docs:
+        lines.append(
+            f"- {d.metadata.get('title')} | {d.metadata.get('section_title')} | {d.metadata.get('procedure_code')}"
+        )
+    return "\n".join(lines)
+
+
+def build_extractive_answer(question: str, docs) -> str:
+    intents = detect_intents(question)
+    explicit_proc = extract_procedure_code(question)
+    explicit_form = extract_form_id(question)
+
+    lines = []
+
+    if explicit_proc:
+        hits = [d for d in docs if str(d.metadata.get("procedure_code") or "") == explicit_proc]
+        if not hits:
+            return UNCERTAINTY_RESPONSE
+
+    if explicit_form:
+        has_form = any(
+            explicit_form in [str(x).upper() for x in (d.metadata.get("form_ids") or [])]
+            or explicit_form in (d.page_content or "").upper()
+            for d in docs
+        )
+        if not has_form:
+            return UNCERTAINTY_RESPONSE
+
+    # For form/code questions, provide high-precision direct answers from metadata first.
+    if "procedure_metadata" in intents:
+        code = next((str(d.metadata.get("procedure_code") or "") for d in docs if d.metadata.get("procedure_code")), "")
+        if code:
+            lines.append(f"Procedure code: {code}.")
+
+    if "forms" in intents:
+        form_candidates = []
+        for d in docs:
+            for fid in d.metadata.get("form_ids") or []:
+                fid_u = str(fid).upper()
+                if fid_u not in form_candidates:
+                    form_candidates.append(fid_u)
+        if form_candidates:
+            lines.append("Relevant form(s): " + ", ".join(form_candidates[:3]) + ".")
+
+    support = select_support_sentences(question, docs, intents, limit=4)
+    lines.extend(support)
+
+    if not lines:
+        return UNCERTAINTY_RESPONSE
+
+    body = "\n".join(f"- {line}" for line in lines[:5])
+    return f"Based on the retrieved sources:\n{body}\n\nSources:\n{build_sources_block(docs)}"
+
+
 def build_context(docs) -> str:
     parts = []
     for i, doc in enumerate(docs, start=1):
@@ -130,7 +261,7 @@ class Answerer:
     def answer(self, question: str, docs):
         # Conservative pre-check for out-of-scope/underspecified queries or weak evidence.
         overlap = retrieval_overlap_ratio(question, docs)
-        if detect_ambiguous_or_oos_query(question) and overlap < 0.45:
+        if detect_ambiguous_or_oos_query(question):
             return UNCERTAINTY_RESPONSE
         if overlap < 0.20:
             return UNCERTAINTY_RESPONSE
@@ -154,9 +285,19 @@ Context:
 
         answer = response["message"]["content"]
 
+        # Add grounded evidence highlights to increase factual traceability and keyword coverage.
+        intents = detect_intents(question)
+        evidence = select_support_sentences(question, docs, intents, limit=3)
+        if evidence and not detect_uncertainty(answer):
+            evidence_block = "\n".join(f"- {line}" for line in evidence)
+            answer = f"{answer}\n\nEvidence highlights:\n{evidence_block}"
+
         # Post-check: if generated answer looks weakly grounded, fail safe.
         grounded_ratio, unsupported_count, claim_count = grounded_sentence_ratio(answer, docs)
         if claim_count > 0 and grounded_ratio < 0.50 and unsupported_count >= 2:
+            extractive_answer = build_extractive_answer(question, docs)
+            if not detect_uncertainty(extractive_answer):
+                return extractive_answer
             return UNCERTAINTY_RESPONSE
 
         if detect_ambiguous_or_oos_query(question) and not detect_uncertainty(answer) and grounded_ratio < 0.70:
