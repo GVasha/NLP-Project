@@ -1,0 +1,101 @@
+id,question,expected_keywords,expected_procedure_code,expected_section_type,expected_form_id
+1,What documents are required to extend a short-term stay?,"ex29|tax model 790 code 012|ordinary passport|travel assistance insurance",994236,documentation,EX29
+2,Where can I submit an extension of short-term stay application?,"aliens office|superior headquarters|police station",994236,where_to_apply,
+3,What is the fee code for extending a short-term stay?,"tax model 790 code 012|printed tax model|fee amount",994236,fees,
+4,How long can a short-term stay extension last?,"three months|period of six|exceptional circumstances",994236,duration_or_validity,
+5,Which form should I use for short-term stay extension?,"form ex29|application for authorization of stay|models of forms",994236,forms,EX29
+6,Who can apply for a student card for foreigners?,"foreigner student|permission to stay longer than six months|who are the stakeholders",993954,stakeholders,
+7,What documents do I need for the student card process?,"application form foreigner id card|tax model 790 code 012|proof of payment",993954,documentation,EX17
+8,Where do I process a student card for foreigners?,"office for foreigners|police station|place where you are domiciled",993954,where_to_apply,
+9,What is the procedure code for student card for foreigners?,"993954|code of the procedure",993954,procedure_metadata,
+10,What form is used for student card for foreigners?,"ex17|foreigner identity card|tie",993954,forms,EX17
+11,How do I request an NIE in Spain?,"general directorate of police|immigration offices|police stations",994354,procedure_steps,
+12,What are the requirements to obtain an NIE by request?,"not in an irregular situation|reasons for requesting|five days",994354,requirements,
+13,What documentation is needed for NIE assignment?,"ex15|foreigner identity number|tax model 790 code 012",994354,documentation,EX15
+14,Where can I apply for NIE assignment if I am abroad?,"spanish consular offices|general commissariat of foreigners and borders|allocation of nie",994354,where_to_apply,
+15,What is the NIE assignment procedure code?,"994354|code of the procedure",994354,procedure_metadata,
+16,What is the validity of a registration certificate?,"1 year|renewable|period of validity",994596,duration_or_validity,
+17,Who is eligible for the registration certificate procedure?,"cannot be documented by the authorities of any country|wishes to be documented by spain",994596,stakeholders,
+18,What documents are required for a registration certificate?,"form ex16|tax model 790 code 012|application for registration card",994596,documentation,EX16
+19,Where do I file a registration certificate application?,"foreigner office|police station|where can i process my application",994596,where_to_apply,
+20,What is the procedure code for registration certificate?,"994596|code of the procedure",994596,procedure_metadata,
+21,What form is used for initial or renewal residence card?,"ex17|tie|foreigner identity card",994694,forms,EX17
+22,Where can I process initial or renewal residence card?,"aliens office|police station|where can i process my application",994694,where_to_apply,
+23,What documents are needed for return authorization?,"form ex13|tax model 790 code 012|return authorization request form",994614,documentation,EX13
+24,How long is return authorization valid?,"ninety days|no limitation of entries and exits|authorized border crossing points",994614,duration_or_validity,
+25,Where do I submit a return authorization request?,"aliens office|police units of foreigners and borders|where can i process my application",994614,where_to_apply,
+26,Which form do I need for return authorization?,"ex13|request for return authorization|models of forms",994614,forms,EX13
+27,Can the short-term stay extension be refused and appealed?,"resources that can be interposed|appeal|organ that resolves the resource",994236,appeals,
+28,Who decides the extension of short-term stay procedure?,"bodies competent to resolve this procedure|general directorate of police",994236,competent_body,
+29,What is the procedure code for short-term stay extension?,"994236|code of the procedure",994236,procedure_metadata,
+30,Can I submit NIE assignment through a legal representative?,"duly authorized legal representative|immigration offices|police stations",994354,procedure_steps,
+31,How soon is NIE assignment resolved?,"five days|from the entry date|application registration",994354,information,
+32,Which authority receives NIE assignment applications from abroad?,"spanish consular offices|consular district|country of residence",994354,where_to_apply,
+33,What fee form is required for NIE assignment?,"tax model 790 code 012|proof of payment|fee",994354,fees,
+34,Is registration certificate valid for one year and renewable?,"1 year|renewable|period of validity",994596,duration_or_validity,
+35,Which office handles the registration certificate process?,"foreigner office|police station|where can i process my application",994596,where_to_apply,
+36,What proof must be included for registration certificate request?,"cannot be documented by the authorities of any country|statement that reasons justify the request",994596,documentation,
+37,What is the procedure code for initial or renewal residence card?,"994694|code of the procedure",994694,procedure_metadata,
+38,What fee is paid for initial or renewal residence card?,"tax model 790 code 012|fee amount|proof of payment",994694,fees,
+39,Where should I apply for initial or renewal residence card?,"aliens office|police station|domiciled",994694,where_to_apply,
+40,What supporting identity documents are needed for return authorization?,"passport|travel document|copy|original",994614,documentation,
+41,Can return authorization allow multiple exits and entries?,"no limitation of entries and exits|ninety days|return authorization",994614,duration_or_validity,
+42,Which office resolves return authorization appeals?,"organ that resolves the resource|resources that can be interposed",994614,appeals,
+43,Who can request return authorization?,"holder of residence or stay authorization|request for return authorization",994614,stakeholders,
+44,Which form is used for NIE assignment by personal request?,"ex15|foreigners identity number|models of forms",994354,forms,EX15
+45,Which form is used for registration certificate applications?,"ex16|registration card|models of forms",994596,forms,EX16
+46,What office receives short-term stay extension applications in Spain?,"aliens office|superior headquarters|police station",994236,where_to_apply,
+47,What insurance evidence is asked for short-term stay extension?,"travel assistance insurance|coverage period|medical expenses",994236,documentation,
+48,What identification document is requested for short-term stay extension?,"ordinary passport|travel document|validity",994236,documentation,
+49,What procedure steps are described for short-term stay extension?,"how to carry out the procedure|submit|application",994236,procedure_steps,
+50,Which authority resolves short-term stay extension appeals?,"organ that resolves the resource|appeal",994236,appeals,
+51,What section includes the official form model for short-term stay extension?,"models of forms|ex29|authorization of stay",994236,forms,EX29
+52,What is the payment model for short-term stay extension fee?,"tax model 790 code 012|printed tax model",994236,fees,
+53,Can short-term stay extension validity exceed three months?,"three months|period of six|exceptional circumstances",994236,duration_or_validity,
+54,Who is the competent body for the short-term stay extension case?,"bodies competent to resolve this procedure|general directorate of police",994236,competent_body,
+55,What code identifies the short-term stay extension file?,"994236|code of the procedure",994236,procedure_metadata,
+56,Where can a student card application be filed by domicile?,"office for foreigners|police station|domiciled",993954,where_to_apply,
+57,What fee proof is required for student card issuance?,"tax model 790 code 012|proof of payment",993954,documentation,
+58,What form number applies to the student card procedure?,"ex17|foreigner identity card",993954,forms,EX17
+59,Which stakeholders are listed for student card procedure?,"foreigner student|permission to stay longer than six months",993954,stakeholders,
+60,What is the metadata code for student card procedure?,"993954|code of the procedure",993954,procedure_metadata,
+61,What is the documented process section for student card?,"process|how to carry out the procedure|application",993954,process,
+62,What regulations are cited for student card processing?,"regulations|foreigners|procedure",993954,regulations,
+63,Who resolves appeals in the student card procedure?,"resources that can be interposed|organ that resolves the resource",993954,appeals,
+64,Which body is competent to resolve student card applications?,"bodies competent to resolve this procedure|general directorate of police",993954,competent_body,
+65,What duration information appears for student card validity?,"period of validity|validity period|duration",993954,duration_or_validity,
+66,Where in Spain can NIE assignment be submitted in person?,"immigration offices|police stations|in person",994354,where_to_apply,
+67,What form must be completed for NIE assignment request?,"ex15|standard application form|signed",994354,forms,EX15
+68,What documents prove identity for NIE assignment?,"passport|identity document|travel document",994354,documentation,
+69,What reasons must be stated for NIE assignment?,"economic|professional|social reasons",994354,requirements,
+70,What office handles NIE assignment outside Spain?,"spanish consular offices|country of residence|consular district",994354,where_to_apply,
+71,What is the fee section for NIE assignment?,"tax model 790 code 012|fee amount",994354,fees,
+72,What is the procedure code for NIE assignment by request?,"994354|code of the procedure",994354,procedure_metadata,
+73,Who are the stakeholders in NIE assignment procedure?,"foreigners|ties to spain|interested party",994354,stakeholders,
+74,What process details mention legal representative submission for NIE?,"legal representative|sufficient power of attorney|submit the application",994354,procedure_steps,
+75,What appeal information appears for NIE assignment?,"resources that can be interposed|appeal",994354,appeals,
+76,Which form belongs to registration certificate requests?,"ex16|registration card|models of forms",994596,forms,EX16
+77,What documentation is requested for registration certificate procedure?,"application for registration card|tax model 790 code 012",994596,documentation,EX16
+78,Where can registration certificate be processed?,"foreigner office|police station|where can i process my application",994596,where_to_apply,
+79,What validity period is listed for registration certificate?,"1 year|renewable|period of validity",994596,duration_or_validity,
+80,Who qualifies for registration certificate according to stakeholders?,"cannot be documented by the authorities of any country|documented by spain",994596,stakeholders,
+81,What is the procedure code for registration certificate processing?,"994596|code of the procedure",994596,procedure_metadata,
+82,Which fee model appears in registration certificate procedure?,"tax model 790 code 012|fee",994596,fees,
+83,What process section explains registration certificate steps?,"process|how to carry out the procedure",994596,process,
+84,What regulations section is listed for registration certificate?,"regulations|administrative",994596,regulations,
+85,What appeal route is provided for registration certificate decisions?,"resources that can be interposed|organ that resolves the resource",994596,appeals,
+86,Which form is required for initial or renewal residence card tie?,"ex17|foreigner identity card|tie",994694,forms,EX17
+87,Where do I file an initial or renewal residence card application?,"aliens office|police station|domiciled",994694,where_to_apply,
+88,What documents are requested for residence card issuance?,"application form foreigner id card|proof of payment|passport",994694,documentation,EX17
+89,What is the fee model for residence card procedure?,"tax model 790 code 012|fee amount",994694,fees,
+90,What is the procedure code for initial or renewal residence card?,"994694|code of the procedure",994694,procedure_metadata,
+91,What validity information appears in residence card procedure?,"validity period|duration|card",994694,duration_or_validity,
+92,Who are the stakeholders for residence card procedure?,"foreigner|residence|renewal",994694,stakeholders,
+93,What process section explains residence card steps?,"process|how to carry out the procedure|submit",994694,process,
+94,What regulation section is shown for residence card processing?,"regulations|administrative",994694,regulations,
+95,Which authority resolves residence card appeals?,"resources that can be interposed|organ that resolves the resource",994694,appeals,
+96,Which form is used for return authorization request?,"ex13|request for return authorization|models of forms",994614,forms,EX13
+97,Where can return authorization be requested in Spain?,"aliens office|police units of foreigners and borders",994614,where_to_apply,
+98,What fee model is listed for return authorization?,"tax model 790 code 012|fee",994614,fees,
+99,How long is return authorization valid and usable?,"ninety days|entries and exits|authorized border crossing points",994614,duration_or_validity,
+100,What is the procedure code for return authorization?,"994614|code of the procedure",994614,procedure_metadata,

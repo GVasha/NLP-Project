@@ -1,0 +1,482 @@
+id,question,expected_procedure_code,expected_section_type,expected_form_id,expected_behavior,retrieved_codes,retrieved_sections,retrieved_form_ids,hit_procedure_code,hit_section_type,hit_form_id,retrieval_keyword_coverage,answer_keyword_coverage,grounded_sentence_ratio,unsupported_claim_sentences,claim_sentences,detected_uncertainty,accuracy_pass,robustness_pass,answer_preview
+1,What documents are required to extend a short-term stay?,994236,documentation,EX29,,994236|994236|994236,documentation|appeals|competent_body,EX29,True,True,True,0.500,0.500,1.000,0,2,False,True,,"To extend a short-term stay, you will need:
+
+* A model of request extension of stay
+* Proof of payment Tax model 790 Code 012
+* An ordinary passport or travel document valid longer than the length of stay requested
+* Acc..."
+2,Where can I submit an extension of short-term stay application?,994236,where_to_apply,,,994236|994236|994236,where_to_apply|forms|documentation,EX29,True,True,True,1.000,1.000,1.000,0,4,False,True,,"To submit an extension of short-term stay application:
+
+* The application together with the accompanying documentation must be submitted to any:
+	+ Aliens Office
+	+ Superior Headquarters
+	+ Police Station
+of the locality..."
+3,What is the fee code for extending a short-term stay?,994236,fees,,,994236|994236|994236,fees|documentation|procedure_metadata,EX29,True,True,True,0.667,0.667,1.000,0,2,True,True,,"There is not enough information in the retrieved sources to provide a specific fee code for extending a short-term stay. 
+
+However, according to Source 1, the printed tax model 790 code 012 can be used as proof of paymen..."
+4,How long can a short-term stay extension last?,994236,duration_or_validity,,,994236|994236|994236,duration_or_validity|forms|procedure_metadata,EX29,True,True,True,1.000,0.667,1.000,0,3,True,True,,"There is not enough information in the retrieved sources to provide a clear answer on how long a short-term stay extension can last.
+
+However, it can be inferred that:
+
+* For entries with visa where the duration of the v..."
+5,Which form should I use for short-term stay extension?,994236,forms,EX29,,994236|994236|994236,forms|classification|appeals,EX29,True,True,True,1.000,1.000,1.000,0,1,True,True,,"To extend a short-term stay, you should use the following form:
+
+* Application for authorization of stay and extensions (Form EX29)
+
+Steps to follow:
+• Fill out the required information in the Form EX29
+• Submit the appl..."
+6,Who can apply for a student card for foreigners?,993954,stakeholders,,,993954|993954|993954,where_to_apply|stakeholders|procedure_metadata,EX17,True,True,True,1.000,0.333,1.000,0,3,False,False,,"According to the provided context, the following are eligible to apply for a student card as foreigners:
+
+* A foreigner who is a student with permission to stay longer than six months.
+
+To apply, they must submit their a..."
+7,What documents do I need for the student card process?,993954,documentation,EX17,,993954|993954|993954,process|documentation|procedure_metadata,EX17,True,True,True,1.000,1.000,1.000,0,2,True,True,,"To obtain a student card as a foreigner, you will need the following documents:
+
+* Application form foreigner ID card (Source 2)
+* Proof of payment Tax model 790 Code 012 (Source 2)
+
+It is not specified in the provided c..."
+8,Where do I process a student card for foreigners?,993954,where_to_apply,,,993954|993954|994694,where_to_apply|process|process,EX17,True,True,True,1.000,1.000,1.000,0,2,True,True,,"To process a student card for foreigners, follow these steps:
+
+* Gather all required documents.
+* Go to an Office for Foreigners (as listed in Source 1) or a Police Station (as listed in Source 1) of the place where you ..."
+9,What is the procedure code for student card for foreigners?,993954,procedure_metadata,,,993954|993954|994694,procedure_metadata|documentation|procedure_metadata,EX17,True,True,True,1.000,1.000,1.000,0,1,True,True,,"The procedure code for a student card for foreigners is 993954.
+
+Sources:
+- Student Card for Foreigners - Section: Code of the procedure: 993954
+- Documentation - Procedure code: 993954 
+- Initial card or renewal residen..."
+10,What form is used for student card for foreigners?,993954,forms,EX17,,993954|993954|993954,forms|procedure_metadata|documentation,EX17,True,True,True,1.000,1.000,1.000,0,4,True,True,,"According to the context, there is not enough information in the retrieved sources about the specific form used for a student card for foreigners. However, it can be inferred that the application form for a Foreigner ID ..."
+11,How do I request an NIE in Spain?,994354,procedure_steps,,,994354|994354|994354,procedure_steps|general|regulations,EX15,True,True,True,1.000,0.333,1.000,0,3,True,False,,"To request an NIE in Spain:
+
+* Go to the General Directorate of Police or visit the Immigration Office/Police Station.
+* Alternatively, you can apply through a Spanish Consular Office abroad if you are not in Spanish ter..."
+12,What are the requirements to obtain an NIE by request?,994354,requirements,,,994354|994354|994354,procedure_metadata|appeals|requirements,EX15,True,True,True,1.000,0.333,1.000,0,4,False,False,,"Based on the provided context, here are the requirements to obtain an NIE by request:
+
+**Requirements:**
+
+* You must not be in an irregular situation in Spain.
+* The reasons for requesting the allocation of this number (..."
+13,What documentation is needed for NIE assignment?,994354,documentation,EX15,,994354|994354|994354,procedure_metadata|information|documentation,EX15,True,True,True,1.000,1.000,1.000,0,2,True,True,,"According to the context, the documentation needed for NIE assignment is:
+
+• Application for Foreigner Identity Number (NIE) and Certificates. (Form EX15)
+• Proof of payment Tax model 790 Code 012
+
+There is not enough in..."
+14,Where can I apply for NIE assignment if I am abroad?,994354,where_to_apply,,,994354|994354|994354,where_to_apply|general|forms,EX15,True,True,True,1.000,1.000,0.833,1,6,False,True,,"To apply for NIE assignment if you are abroad, you will need to:
+
+* Contact the Spanish Consular Office abroad where you are located.
+* Submit your application through this office.
+
+No further specific steps or forms are..."
+15,What is the NIE assignment procedure code?,994354,procedure_metadata,,,994354|994614|994596,procedure_metadata|procedure_metadata|procedure_metadata,EX13|EX15|EX16,True,True,True,1.000,1.000,1.000,0,2,True,True,,"There is not enough information in the provided context to determine the NIE assignment procedure code. The relevant codes mentioned are 994354 for Assignment of NIE, 994614 for Return authorization, and 994596 for Regis..."
+16,What is the validity of a registration certificate?,994596,duration_or_validity,,,994596|994694|993954,duration_or_validity|duration_or_validity|duration_or_validity,EX16|EX17,True,True,True,1.000,0.667,1.000,0,4,False,True,,"According to the context:
+
+* The registration certificate is valid for 1 year from its issuance.
+* It can be renewed.
+* The period of validity of the registration certificate is the same as the authorization or recogniti..."
+17,Who is eligible for the registration certificate procedure?,994596,stakeholders,,,994596|994596|994596,procedure_metadata|information|stakeholders,EX16,True,True,True,1.000,0.500,1.000,0,4,False,True,,"According to the context, the following individuals are eligible for the registration certificate procedure:
+
+• Foreigners who cannot be documented by the authorities of any country.
+• Foreigners who wish to be documente..."
+18,What documents are required for a registration certificate?,994596,documentation,EX16,,994596|994596|994596,documentation|procedure_metadata|general,EX16,True,True,True,0.667,0.333,1.000,0,1,True,False,,"According to the context:
+
+**Required documents for a registration certificate:**
+
+* Printed document provided by the authorities
+* Proof of payment (Tax model 790 Code 012)
+
+There is not enough information in the retrie..."
+19,Where do I file a registration certificate application?,994596,where_to_apply,,,994596|994694|993954,where_to_apply|where_to_apply|where_to_apply,EX16|EX17,True,True,True,1.000,1.000,1.000,0,1,False,True,,"To file a registration certificate application, you must submit your application and accompanying documentation to:
+
+* Foreigner Office
+* Police Station
+
+You can find these offices at:
+* https://www.mptfp.gob.es/portal/d..."
+20,What is the procedure code for registration certificate?,994596,procedure_metadata,,,994596|994694|994614,procedure_metadata|procedure_metadata|procedure_metadata,EX13|EX16|EX17,True,True,True,1.000,1.000,1.000,0,2,False,True,,"The procedure code for registration certificate is 994596.
+
+Sources:
+* Registration certificate
+	+ Code of the procedure: 994596
+	+ Procedure code: 994596 (Source 1)
+* Initial card or renewal residence or residence and w..."
+21,What form is used for initial or renewal residence card?,994694,forms,EX17,,994694|994694|994694,procedure_metadata|duration_or_validity|forms,EX17,True,True,True,1.000,1.000,1.000,0,2,False,True,,"According to the provided context, for the initial or renewal of a residence card, the following form is used:
+
+* Form EX17: Application for Foreigner Identity Card (TIE) 
+
+Sources:
+Initial card or renewal residence or r..."
+22,Where can I process initial or renewal residence card?,994694,where_to_apply,,,994694|994694|993954,where_to_apply|process|process,EX17,True,True,True,0.667,0.667,1.000,0,2,False,True,,"To process an initial or renewal residence card, you can:
+
+* Submit the application and documentation to:
+  + Immigration Offices
+  + Police Stations (face-to-face)
+
+
+ Sources:
+ Student Card for Foreigners 
+tramites_extr..."
+23,What documents are needed for return authorization?,994614,documentation,EX13,,994614|994614|994596,documentation|requirements|documentation,EX13|EX16,True,True,True,1.000,1.000,0.667,1,3,False,True,,"Based on the provided context, here are the documents needed for return authorization:
+
+* Return Authorization Request Form (Form EX13)
+* Proof of payment Tax model 790 Code 012.
+
+Note that there is no clear information ..."
+24,How long is return authorization valid?,994614,duration_or_validity,,,994614|994614|994596,duration_or_validity|requirements|duration_or_validity,EX13|EX16,True,True,True,1.000,1.000,1.000,0,4,True,True,,"There is not enough information in the retrieved sources to determine the exact length of return authorization validity. However, according to Source 1:
+
+* During the validity of the ninety days of the return authorizati..."
+25,Where do I submit a return authorization request?,994614,where_to_apply,,,994614|994596|994694,where_to_apply|where_to_apply|where_to_apply,EX13|EX16|EX17,True,True,True,0.667,0.667,1.000,0,3,False,True,,"To submit a return authorization request, you must file the application and accompanying documentation at either:
+
+* Aliens Office
+* Police Unit
+
+Note that there is no specific requirement to submit it at a Foreigner Off..."
+26,Which form do I need for return authorization?,994614,forms,EX13,,994614|994614|994614,forms|procedure_metadata|requirements,EX13,True,True,True,1.000,1.000,1.000,0,1,True,True,,"Based on the provided context, it appears that there is not enough information to determine which specific form you need for a return authorization. The forms mentioned in the context are:
+
+* Request for Return Authoriza..."
+27,Can the short-term stay extension be refused and appealed?,994236,appeals,,,994236|994236|993954,appeals|appeals|appeals,EX17|EX29,True,True,True,1.000,1.000,1.000,0,3,False,True,,"Yes, a short-term stay extension can be refused and appealed.
+
+Here's how to proceed:
+
+* Refusal of the extension:
+	+ Follow the procedure outlined in Procedure code: 994236
+	+ Lodge a complaint (Resource) with the relev..."
+28,Who decides the extension of short-term stay procedure?,994236,competent_body,,,994236|994596|994236,competent_body|competent_body|procedure_metadata,EX16|EX29,True,True,True,0.500,0.500,1.000,0,3,False,True,,"According to the provided context, the extension of a short-term stay can be decided by the following bodies:
+
+* Sub-Delegates of the Government
+* Government Delegates in Uniprovincial Autonomous Communities
+* General Co..."
+29,What is the procedure code for short-term stay extension?,994236,procedure_metadata,,,994236|994236|994236,procedure_metadata|procedure_metadata|forms,EX29,True,True,True,1.000,1.000,1.000,0,2,False,True,,"The procedure code for short-term stay extension is: 994236.
+
+Steps to follow:
+
+* Submit the application form EX29, ""Application for authorization of stay and extensions"" (form available on https://www.inclusion.gob.es/d..."
+30,Can I submit NIE assignment through a legal representative?,994354,procedure_steps,,,994354|994354|994354,where_to_apply|appeals|appeals,EX15,True,False,True,0.667,0.667,1.000,0,4,False,True,,"Yes, you can submit NIE assignment through a legal representative. 
+
+Steps to process your application:
+
+• Go to Immigration Offices or Police Stations (Source 1)
+• Alternatively, go to Spanish Consular Offices abroad if..."
+31,How soon is NIE assignment resolved?,994354,information,,,994354|994354|994354,general|appeals|appeals,EX15,True,False,True,0.333,0.333,0.833,1,6,False,False,,"According to the context, the NIE assignment procedure is typically resolved within a maximum period of 5 days from the entry of the application in the register of the competent body.
+
+Here are the steps:
+
+* The applicat..."
+32,Which authority receives NIE assignment applications from abroad?,994354,where_to_apply,,,994354|994354|994354,general|forms|where_to_apply,EX15,True,True,True,0.333,0.333,1.000,0,2,False,False,,"The authority that receives NIE assignment applications from abroad is:
+
+* The General Directorate of Police (for those living in Spanish territory)
+* The General Commissariat of Foreigners and Borders (for those not liv..."
+33,What fee form is required for NIE assignment?,994354,fees,,,994354|994354|994354,fees|procedure_metadata|appeals,EX15,True,True,True,0.667,0.667,1.000,0,6,False,True,,"The required fee form for NIE assignment is not explicitly stated in the provided context. However, it is mentioned that a Printed Tax Model 790 Code 012 is available (https://sede.policia.gob.es/Tasa790_012/), which may..."
+34,Is registration certificate valid for one year and renewable?,994596,duration_or_validity,,,994596|994694|994614,duration_or_validity|duration_or_validity|duration_or_validity,EX13|EX16|EX17,True,True,True,1.000,1.000,1.000,0,1,False,True,,"Yes, according to [Source 1], a Registration certificate is valid for:
+
+* 1 year
+* Renewable
+
+Sources:
+Registration certificate (Section: Period of validity)
+Procedure code: 994596
+https://sede.policia.gob.es/portalCiuda..."
+35,Which office handles the registration certificate process?,994596,where_to_apply,,,994596|994694|994596,process|process|where_to_apply,EX16|EX17,True,True,True,1.000,1.000,0.857,1,7,False,True,,"According to the retrieved context, there are two offices that handle the registration certificate process:
+
+* Foreigner Office
+* Police Station
+
+Note that both can be used as alternatives for filing the application alon..."
+36,What proof must be included for registration certificate request?,994596,documentation,,,994596|994596|994614,documentation|procedure_metadata|documentation,EX13|EX16,True,True,True,0.000,0.000,1.000,0,3,True,False,,"The context does not provide a clear answer to what proof must be included for registration certificate request. However, it does mention that:
+
+* Proof of payment is required for Tax model 790 Code 012 (Source 1 and Sou..."
+37,What is the procedure code for initial or renewal residence card?,994694,procedure_metadata,,,994694|993954|994596,procedure_metadata|procedure_metadata|procedure_metadata,EX16|EX17,True,True,True,1.000,1.000,1.000,0,2,False,True,,"According to the context, the Procedure code for initial or renewal residence card is 994694.
+
+Sources:
+Initial card or renewal residence or residence and work -> Code of the procedure: 994694
+
+Evidence highlights:
+- Tit..."
+38,What fee is paid for initial or renewal residence card?,994694,fees,,,994694|993954|994596,fees|fees|fees,EX16|EX17,True,True,True,0.333,0.333,1.000,0,2,False,False,,"According to the context, the fee for initial or renewal residence card is:
+
+* €30 (Source: [Source 1], Procedure code: 994694)
+* Same as other related procedures (Student Card, Registration certificate), specifically:
+	..."
+39,Where should I apply for initial or renewal residence card?,994694,where_to_apply,,,994694|993954|994236,where_to_apply|where_to_apply|where_to_apply,EX17|EX29,True,True,True,1.000,1.000,1.000,0,1,False,True,,"To apply for an initial or renewal residence card:
+
+* Submit your application and accompanying documentation to:
+	+ Immigration Offices
+	+ Police Stations
+
+In specific cases, you may also submit your application to:
+* Of..."
+40,What supporting identity documents are needed for return authorization?,994614,documentation,,,994614|994614|994596,documentation|requirements|documentation,EX13|EX16,True,True,True,0.000,0.000,1.000,0,2,False,False,,"According to the context, the following identity documents are needed for return authorization:
+
+* Form EX13: Return Authorization Request
+* Registration certificate (Form EX16): 
+  • Proof of payment Tax model 790 Code ..."
+41,Can return authorization allow multiple exits and entries?,994614,duration_or_validity,,,994614|994614|994614,requirements|procedure_metadata|duration_or_validity,EX13,True,True,True,1.000,1.000,1.000,0,3,True,True,,"Based on the provided context, it appears that:
+
+* Return authorization (Procedure code: 994614) does not explicitly state whether it allows multiple exits and entries.
+* There is a statement about ""no limitation of entr..."
+42,Which office resolves return authorization appeals?,994614,appeals,,,994596|994596|994236,appeals|appeals|appeals,EX16|EX29,False,True,True,1.000,0.500,1.000,0,3,True,True,,"According to the context, there is not enough information in the retrieved sources about which office specifically resolves return authorization appeals.
+
+However, the content of Source 2 suggests that administrative lit..."
+43,Who can request return authorization?,994614,stakeholders,,,994614|994614|994614,requirements|requirements|requirements,EX13,True,False,True,0.000,0.000,1.000,0,3,False,False,,"According to the context:
+
+* The competent authorities for granting return authorization are:
+	+ Delegate or Subdelegate of the competent Government
+	+ Commissioner General for Foreigners and Borders
+	+ Persons holding p..."
+44,Which form is used for NIE assignment by personal request?,994354,forms,EX15,,994354|994354|994354,forms|procedure_metadata|appeals,EX15,True,True,True,0.667,0.667,1.000,0,1,True,True,,"To apply for an NIE by personal request, follow these steps using Form EX15:
+
+* Download and fill out Form EX15 from the official government website (https://www.inclusion.gob.es/documents/d/migraciones/ex15-formulario-n..."
+45,Which form is used for registration certificate applications?,994596,forms,EX16,,994596|994694|993954,forms|forms|forms,EX16|EX17,True,True,True,1.000,1.000,1.000,0,5,False,True,,"Based on the provided context, it appears that Form EX16 is used for registration certificate applications.
+
+Steps:
+
+* Application for Registration Card or Travel Title (LO 4/2000 and RD 1155/2024) must be submitted.
+* T..."
+46,What office receives short-term stay extension applications in Spain?,994236,where_to_apply,,,994236|994236|994694,where_to_apply|general|where_to_apply,EX17|EX29,True,True,True,1.000,0.667,1.000,0,3,False,True,,"According to the provided context, the Aliens Office receives short-term stay extension applications in Spain. 
+
+Steps:
+* Submit application and documentation to an Aliens Office
+* Alternatively, submit to a Police Stati..."
+47,What insurance evidence is asked for short-term stay extension?,994236,documentation,,,994236|994236|994236,documentation|information|appeals,EX29,True,True,True,0.000,0.000,1.000,0,3,True,False,,"For a short-term stay extension, the required insurance evidence is not explicitly mentioned in the provided context. However, it is possible to infer from the information on ""Documentación"" (Documentation) section of So..."
+48,What identification document is requested for short-term stay extension?,994236,documentation,,,994236|994236|994236,documentation|appeals|documentation,EX29,True,True,True,1.000,0.667,1.000,0,3,False,True,,"For short-term stay extension, the following identification document is requested:
+
+* Ordinary passport or travel document that is valid for longer than the length of stay requested.
+
+Additional documents required are:
+ ..."
+49,What procedure steps are described for short-term stay extension?,994236,procedure_steps,,,994236|994236|994694,procedure_steps|process|procedure_steps,EX17|EX29,True,True,True,1.000,1.000,1.000,0,4,False,True,,"Based on the provided context, here are the procedure steps for short-term stay extension:
+
+**Step 1: Prepare application and documentation**
+* Model of request extension of stay (Source 1)
+* The application and accompan..."
+50,Which authority resolves short-term stay extension appeals?,994236,appeals,,,994236|994236|994236,appeals|appeals|competent_body,EX29,True,True,True,1.000,0.500,1.000,0,4,True,True,,"According to the context, there is not enough information on which authority resolves short-term stay extension appeals.
+
+However, the following bodies are competent to resolve this procedure:
+
+* Contentious Court - Admi..."
+51,What section includes the official form model for short-term stay extension?,994236,forms,EX29,,994236|994236|994236,forms|procedure_metadata|appeals,EX29,True,True,True,1.000,1.000,1.000,0,3,True,True,,"Based on the provided context, there is not enough information in the retrieved sources to pinpoint a specific section that includes the official form model for short-term stay extension.
+
+However, Sources 1 and 2 provid..."
+52,What is the payment model for short-term stay extension fee?,994236,fees,,,994236|994236|994236,fees|documentation|appeals,EX29,True,True,True,1.000,0.000,1.000,0,1,True,False,,"There is not enough information in the retrieved sources to determine the payment model for a short-term stay extension fee.
+
+However, according to [Source 1], it states that the fee amount can be viewed on the website: ..."
+53,Can short-term stay extension validity exceed three months?,994236,duration_or_validity,,,994236|994236|994236,duration_or_validity|appeals|procedure_metadata,EX29,True,True,True,1.000,0.333,1.000,0,2,True,False,,"Based on the provided context, there is not enough information to determine if the validity of a short-term stay extension can exceed three months.
+
+However, from Source 1 and Source 2, it appears that when the duration ..."
+54,Who is the competent body for the short-term stay extension case?,994236,competent_body,,,994236|994596|994236,competent_body|competent_body|appeals,EX16|EX29,True,True,True,0.500,0.500,1.000,0,3,False,True,,"Based on the provided context, here is who is the competent body for the short-term stay extension case:
+
+The competent bodies are:
+• Sub-Delegates of the Government
+• Government Delegates in the Uniprovincial Autonomous..."
+55,What code identifies the short-term stay extension file?,994236,procedure_metadata,,,994236|994236|994236,forms|procedure_metadata|classification,EX29,True,True,True,1.000,0.500,1.000,0,2,False,True,,"The code that identifies the short-term stay extension file is:
+
+* Procedure code: 994236 (consistent across all sources)
+
+Sources:
+Extension of short-term stay, Models of forms, Procedure code
+https://sede.policia.gob.e..."
+56,Where can a student card application be filed by domicile?,993954,where_to_apply,,,993954|994694|994596,where_to_apply|where_to_apply|where_to_apply,EX16|EX17,True,True,True,1.000,1.000,1.000,0,3,True,True,,"According to the context, a student card application can be filed by domicile at:
+
+* Any Office for Foreigners (e.g. https://www.mptfp.gob.es/portal/delegaciones_gobierno/extranjeria/extranjeria_ddgg.html)
+* Or
+* Any Pol..."
+57,What fee proof is required for student card issuance?,993954,documentation,,,993954|993954|993954,documentation|fees|procedure_metadata,EX17,True,True,True,1.000,1.000,1.000,0,3,False,True,,"Based on the provided context, here is the information about the fee proof required for student card issuance:
+
+* You need to present a printed Tax Model 790 Code 012 as proof of payment.
+
+Steps:
+
+• View the amount of fe..."
+58,What form number applies to the student card procedure?,993954,forms,EX17,,993954|993954|993954,procedure_metadata|information|forms,EX17,True,True,True,1.000,1.000,1.000,0,2,True,True,,"There is not enough information in the retrieved sources about a specific ""student card procedure"". However, Source 3 mentions an application for Foreigner Identity Card (TIE) with a form code of EX17.
+
+Sources:
+
+* Title..."
+59,Which stakeholders are listed for student card procedure?,993954,stakeholders,,,993954|993954|993954,stakeholders|information|appeals,EX17,True,True,True,1.000,1.000,1.000,0,2,True,True,,"According to the context, the following stakeholders are listed for the student card procedure:
+
+• The interested party (foreigner student with permission to stay longer than six months)
+• The organ that dictates the act..."
+60,What is the metadata code for student card procedure?,993954,procedure_metadata,,,993954|993954|993954,procedure_metadata|information|documentation,EX17,True,True,True,1.000,1.000,1.000,0,2,False,True,,"The metadata code for the student card procedure is:
+
+993954
+
+This code is consistently mentioned in all three sources as the procedure code for the ""Student Card for Foreigners"" procedure. 
+
+Sources:
+Title: Student Card..."
+61,What is the documented process section for student card?,993954,process,,,993954|993954|994596,process|information|process,EX16|EX17,True,True,True,0.333,0.333,0.625,3,8,True,False,,"There is not enough information in the retrieved context to provide a detailed process section for a student card. However, I can provide some general steps based on the available information.
+
+**General Steps:**
+
+*   In..."
+62,What regulations are cited for student card processing?,993954,regulations,,,993954|993954|993954,process|regulations|procedure_metadata,EX17,True,True,True,1.000,1.000,1.000,0,1,True,True,,"Unfortunately, there is not enough information in the retrieved sources to cite specific regulations for student card processing.
+
+However, the following regulations are mentioned as relevant:
+
+* Organic Law 4/2000 of 11..."
+63,Who resolves appeals in the student card procedure?,993954,appeals,,,993954|993954|993954,appeals|appeals|competent_body,EX17,True,True,True,1.000,0.000,1.000,0,1,True,False,,"According to the context, the following bodies are competent to resolve appeals in the student card procedure:
+
+* The General Directorate of Police, in accordance with the coordination criteria established by the State S..."
+64,Which body is competent to resolve student card applications?,993954,competent_body,,,993954|993954|993954,competent_body|procedure_metadata|appeals,EX17,True,True,True,1.000,0.500,0.500,1,2,True,True,,"According to the provided context, there is not enough information in the retrieved sources to determine which body is competent to resolve student card applications.
+
+The available information only mentions the General ..."
+65,What duration information appears for student card validity?,993954,duration_or_validity,,,993954|993954|993954,duration_or_validity|forms|procedure_metadata,EX17,True,True,True,0.333,1.000,1.000,0,2,True,True,,"According to the context, there is not enough information in the retrieved sources to determine the specific duration of validity for a student card. 
+
+However, it can be inferred that the validity period is tied to the ..."
+66,Where in Spain can NIE assignment be submitted in person?,994354,where_to_apply,,,994354|994354|994354,where_to_apply|general|regulations,EX15,True,True,True,0.667,1.000,0.714,2,7,False,True,,"To submit NIE assignment in person in Spain, you can do so at:
+
+* Immigration Offices
+* Police Stations
+
+Note that the foreigner must be present in Spanish territory at the time of application.
+
+Steps to process your app..."
+67,What form must be completed for NIE assignment request?,994354,forms,EX15,,994354|994354|994354,forms|procedure_metadata|appeals,EX15,True,True,True,0.333,0.333,1.000,0,1,True,False,,"To complete a form for NIE assignment request, follow these steps:
+
+* Download and fill out Form EX15: Application for Foreigner Identity Number (NIE) and Certificates from the official government website (https://www.in..."
+68,What documents prove identity for NIE assignment?,994354,documentation,,,994354|994354|994354,documentation|forms|procedure_metadata,EX15,True,True,True,0.000,0.667,1.000,0,3,False,True,,"To prove identity for NIE assignment, the following documents are required according to the available context:
+
+• A valid passport
+• Proof of residence (e.g. utility bill or rental agreement)
+• Identity document (such as..."
+69,What reasons must be stated for NIE assignment?,994354,requirements,,,994354|994354|994354,procedure_metadata|appeals|appeals,EX15,True,False,True,0.000,0.000,0.667,2,6,True,False,,"According to the context, there is not enough information in the retrieved sources on specific reasons that must be stated for NIE assignment. However, I can tell you about the procedure and resources related to it:
+
+**S..."
+70,What office handles NIE assignment outside Spain?,994354,where_to_apply,,,994354|994354|994354,where_to_apply|general|regulations,EX15,True,True,True,0.333,0.000,0.857,1,7,False,False,,"To assign an NIE outside Spain, you need to contact:
+
+* The Spanish Consular Office abroad.
+
+Steps:
+• Submit your application through the relevant consular office.
+• Provide the required documents and information.
+• Wait..."
+71,What is the fee section for NIE assignment?,994354,fees,,,994354|994354|994354,fees|procedure_metadata|appeals,EX15,True,True,True,0.500,0.500,1.000,0,1,True,True,,"According to Source 1, Section ""Fee, amount and place of payment"":
+
+* Fee: Printed Tax Model 790 Code 012
+	+ Not specified what this code entails in terms of the NIE assignment fee
+
+There is not enough information in the..."
+72,What is the procedure code for NIE assignment by request?,994354,procedure_metadata,,,994354|994354|994614,procedure_metadata|appeals|procedure_metadata,EX13|EX15,True,True,True,1.000,1.000,1.000,0,2,False,True,,"According to the context, the procedure code for NIE assignment by request is 994354.
+
+Steps:
+• Lodge an application through the Sede portal (https://sede.policia.gob.es/portalCiudadano/_ca-valencia/tramites_extranjeria_..."
+73,Who are the stakeholders in NIE assignment procedure?,994354,stakeholders,,,994354|994354|994354,procedure_metadata|information|appeals,EX15,True,False,True,0.333,0.333,1.000,0,2,False,False,,"Based on the provided context, the following are the stakeholders in the NIE assignment procedure:
+
+* Claimant (interested party requesting the NIE)
+* Respondent (the Spanish authorities responsible for issuing the NIE)
+..."
+74,What process details mention legal representative submission for NIE?,994354,procedure_steps,,,994354|994354|994354,process|procedure_metadata|information,EX15,True,False,True,0.000,0.333,0.750,1,4,False,False,,"From the provided context, it appears that the following process details mention legal representative submission for NIE:
+
+* A face-to-face appointment is required (Source 1).
+* The procedure code 994354 is mentioned as ..."
+75,What appeal information appears for NIE assignment?,994354,appeals,,,994354|994354|994354,appeals|appeals|forms,EX15,True,True,True,1.000,0.500,1.000,0,5,False,True,,"Based on the provided context, here is the appeal information for NIE assignment:
+
+* Procedure code: 994354
+* Organ that resolves the resource:
+	+ Contentious Court - Administrative.
+	+ Central Administrative Litigation ..."
+76,Which form belongs to registration certificate requests?,994596,forms,EX16,,994596|994596|994694,forms|procedure_metadata|forms,EX16|EX17,True,True,True,1.000,1.000,1.000,0,3,False,True,,"The form that belongs to registration certificate requests is the Application for Registration Card or Travel Title (Form EX16) and the Application for Foreigner Identity Card (Form EX17).
+
+Steps to request a registratio..."
+77,What documentation is requested for registration certificate procedure?,994596,documentation,EX16,,994596|994596|994596,documentation|procedure_metadata|information,EX16,True,True,True,0.500,0.500,1.000,0,1,True,True,,"Here is the documentation requested for registration certificate procedure in Spain, based on the provided context:
+
+* Basic requirements:
+	+ Form EX16 (https://www.inclusion.gob.es/documents/d/migraciones/ex16-formulari..."
+78,Where can registration certificate be processed?,994596,where_to_apply,,,994596|994694|994596,process|process|where_to_apply,EX16|EX17,True,True,True,1.000,0.000,0.000,1,1,True,False,,"There is not enough information in the retrieved sources to answer this safely. Please rephrase your question with specific procedure details, form code, or document type."
+79,What validity period is listed for registration certificate?,994596,duration_or_validity,,,994596|994694|993954,duration_or_validity|duration_or_validity|duration_or_validity,EX16|EX17,True,True,True,1.000,0.667,1.000,0,4,True,True,,"There is not enough information in the retrieved sources to determine a specific validity period for the registration certificate.
+
+However, it can be inferred that the registration certificate is renewable within a 1-ye..."
+80,Who qualifies for registration certificate according to stakeholders?,994596,stakeholders,,,994596|994596|994596,procedure_metadata|stakeholders|duration_or_validity,EX16,True,True,True,1.000,1.000,1.000,0,1,True,True,,"According to the stakeholders, a registration certificate is issued to:
+
+* Foreigners who cannot be documented by the authorities of any country and wish to be documented by Spain (Source 2).
+
+There is not enough informa..."
+81,What is the procedure code for registration certificate processing?,994596,procedure_metadata,,,994596|994596|994614,procedure_metadata|process|process,EX13|EX16,True,True,True,1.000,1.000,0.750,1,4,True,True,,"There is not enough information in the retrieved sources to provide a detailed procedure for registration certificate processing. However, according to Source 1 and Source 2:
+
+* The procedure code for registration certif..."
+82,Which fee model appears in registration certificate procedure?,994596,fees,,,994596|994596|994614,fees|procedure_metadata|fees,EX13|EX16,True,True,True,1.000,1.000,1.000,0,2,True,True,,"There is not enough information in the retrieved sources to determine the specific fee model that appears in the registration certificate procedure.
+
+However, we can infer that the payment method for the registration cer..."
+83,What process section explains registration certificate steps?,994596,process,,,994596|994596|994614,process|procedure_steps|process,EX13|EX16,True,True,True,1.000,0.500,1.000,0,2,True,True,,"There is not enough information in the retrieved sources to explain the steps for a registration certificate. 
+
+The context only provides details about two procedures: ""Registration certificate"" (procedure code 994596) a..."
+84,What regulations section is listed for registration certificate?,994596,regulations,,,994596|994596|994596,regulations|procedure_metadata|duration_or_validity,EX16,True,True,True,0.500,0.500,0.800,1,5,False,True,,"The regulations section for registration certificate is not explicitly listed in the provided context. However, it can be inferred that there are regulations for the registration certificate as mentioned in:
+
+* Organic L..."
+85,What appeal route is provided for registration certificate decisions?,994596,appeals,,,994596|994596|993954,appeals|appeals|appeals,EX16|EX17,True,True,True,1.000,1.000,1.000,0,2,False,True,,"For registration certificate decisions, there are two appeal routes provided:
+
+* Replacement:
+	+ Organ that resolves the resource: Organ that dictated the act (Source 1)
+	+ Period for lodging an appeal: 1 month
+* Content..."
+86,Which form is required for initial or renewal residence card tie?,994694,forms,EX17,,994694|994694|994694,forms|procedure_metadata|duration_or_validity,EX17,True,True,True,1.000,0.333,0.667,1,3,True,False,,"There is not enough information in the retrieved sources to determine which form is required for initial or renewal of a residence card tie (TIE).
+
+The retrieved sources provide information on procedures related to obtai..."
+87,Where do I file an initial or renewal residence card application?,994694,where_to_apply,,,994694|993954|994236,where_to_apply|where_to_apply|where_to_apply,EX17|EX29,True,True,True,1.000,0.333,1.000,0,3,False,False,,"To file an initial or renewal residence card application, you can submit your application and accompanying documentation to:
+
+* Any Immigration Office
+* Police Stations
+
+Note that there is no specific requirement to choo..."
+88,What documents are requested for residence card issuance?,994694,documentation,EX17,,994694|994694|994694,documentation|procedure_metadata|information,EX17,True,True,True,0.333,0.333,1.000,0,1,True,False,,"Based on the provided context, here are the documents requested for residence card issuance:
+
+* Foreigner Identity Card (TIE) (Form EX17)
+* Application Form
+* Proof of payment Tax model 790 Code 012.
+
+There is not enough..."
+89,What is the fee model for residence card procedure?,994694,fees,,,994694|994694|993954,fees|procedure_metadata|fees,EX17,True,True,True,0.500,0.000,1.000,0,2,True,False,,"Unfortunately, there is not enough information in the retrieved sources about the fee model for residence card procedure. The available sources provide details about the code of the procedure (994694), but do not specify..."
+90,What is the procedure code for initial or renewal residence card?,994694,procedure_metadata,,,994694|993954|994596,procedure_metadata|procedure_metadata|procedure_metadata,EX16|EX17,True,True,True,1.000,1.000,1.000,0,2,False,True,,"According to the provided context, the Procedure code for initial or renewal residence card is 994694.
+
+Sources:
+- Title: Initial card or renewal residence or residence and work - Section: Code of the procedure - Procedu..."
+91,What validity information appears in residence card procedure?,994694,duration_or_validity,,,994694|993954|994596,duration_or_validity|duration_or_validity|duration_or_validity,EX16|EX17,True,True,True,0.333,0.333,1.000,0,4,False,False,,"The following validity information appears in the residence card procedure:
+
+* The period of validity is determined by the authorization or recognition of the right that justifies its issuance.
+* The residence card will ..."
+92,Who are the stakeholders for residence card procedure?,994694,stakeholders,,,994694|994694|994694,procedure_metadata|information|duration_or_validity,EX17,True,False,True,0.667,0.667,1.000,0,2,False,True,,"The stakeholders for the residence card procedure are:
+
+* The interested party (the person requesting the residence card)
+* The Spanish authorities (specifically, the National Police)
+
+Note that there is no explicit ment..."
+93,What process section explains residence card steps?,994694,process,,,994694|994694|994596,process|procedure_steps|procedure_steps,EX16|EX17,True,True,True,1.000,0.667,1.000,0,2,True,True,,"There is not enough information in the retrieved sources to explain the specific steps for a residence card. 
+
+The context provided includes:
+
+* Procedure code 994694, which refers to ""Initial card or renewal residence o..."
+94,What regulation section is shown for residence card processing?,994694,regulations,,,994694|994596|994694,process|process|regulations,EX16|EX17,True,True,True,0.500,0.500,1.000,0,4,True,True,,"There is not enough information in the retrieved sources to determine which regulation section is shown for residence card processing.
+
+However, I can provide some general context and steps:
+
+The relevant procedure codes..."
+95,Which authority resolves residence card appeals?,994694,appeals,,,994596|993954|993954,appeals|appeals|appeals,EX16|EX17,False,True,True,1.000,0.500,1.000,0,2,True,True,,"According to the context, there is not enough information in the retrieved sources to identify a single authority that resolves residence card appeals. 
+
+However, for student cards (which may be related), the organ that ..."
+96,Which form is used for return authorization request?,994614,forms,EX13,,994614|994596|994236,forms|forms|forms,EX13|EX16|EX29,True,True,True,1.000,1.000,1.000,0,4,False,True,,"According to the context, the form used for return authorization request is:
+
+* Form EX13: Request for Return Authorization 
+
+Steps to fill out this form are not explicitly stated in the retrieved context. If you need mo..."
+97,Where can return authorization be requested in Spain?,994614,where_to_apply,,,994614|994596|994614,where_to_apply|where_to_apply|general,EX13|EX16,True,True,True,0.500,0.500,1.000,0,3,False,True,,"To request a Return authorization in Spain, follow these steps:
+
+* Submit an application with required documentation at:
+	+ Aliens Office (https://www.mptfp.gob.es/portal/delegaciones_gobierno/extranjeria/extranjeria_ddg..."
+98,What fee model is listed for return authorization?,994614,fees,,,994614|994596|994354,fees|fees|fees,EX13|EX15|EX16,True,True,True,1.000,1.000,1.000,0,1,True,True,,"There is not enough information in the retrieved sources to determine the specific fee model listed for return authorization.
+
+The sources only provide general information about fees for related procedures (Registration ..."
+99,How long is return authorization valid and usable?,994614,duration_or_validity,,,994614|994614|994596,duration_or_validity|requirements|duration_or_validity,EX13|EX16,True,True,True,1.000,0.667,1.000,0,6,False,True,,"The return authorization is valid for 90 days from the date of its issuance. 
+
+Here are the key points to consider:
+
+* The return authorization is only valid for entry through Spanish authorized border crossing points.
+*..."
+100,What is the procedure code for return authorization?,994614,procedure_metadata,,,994614|994596|994236,procedure_metadata|procedure_metadata|procedure_metadata,EX13|EX16|EX29,True,True,True,1.000,1.000,1.000,0,2,False,True,,"The procedure code for return authorization is 994614.
+
+Sources:
+Return Authorization - Code of the procedure: 994614 (Source 1)
+Registration Certificate - Not relevant to return authorization (Source 2)
+Extension of Sho..."

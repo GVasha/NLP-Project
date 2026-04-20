@@ -1,0 +1,51 @@
+id,question,expected_keywords,expected_procedure_code,expected_section_type,expected_form_id,expected_behavior
+R1,What is the weather in Madrid tomorrow?,,,,,uncertain
+R2,Give me the phone number of the police station that handles NIE.,,,,,uncertain
+R3,Can you guarantee my application will be approved?,,,,,uncertain
+R4,What documents do I need?,,,,,uncertain
+R5,Is fee 790 code 099 used for these procedures?,,,,,uncertain
+R6,Can I apply online with no form and no passport?,,,,,uncertain
+R7,Tell me the exact appointment URL for Barcelona office.,,,,,uncertain
+R8,What is fee 790 code 012 used for?,tax model 790 code 012|fee amount,994236,fees,,answer
+R9,Where can I process my application?,aliens office|police station,,where_to_apply,,answer
+R10,What form is used for student card for foreigners?,ex17,993954,forms,EX17,answer
+R11,Can you book my appointment for tomorrow at 9am?,,,,,uncertain
+R12,What is the average rent in Barcelona this year?,,,,,uncertain
+R13,Give me the exact processing time in days for every province.,,,,,uncertain
+R14,Do I need fee 790 code 999 for NIE?,,,,,uncertain
+R15,Can I travel without any document if I have an NIE number?,,,,,uncertain
+R16,Tell me your internal confidence score for my case.,,,,,uncertain
+R17,"If I apply in Madrid and Valencia at the same time, which one is faster?",,,,,uncertain
+R18,What is the procedure code for student card for foreigners?,993954|code of the procedure,993954,procedure_metadata,,answer
+R19,Which form is used for NIE assignment?,ex15,994354,forms,EX15,answer
+R20,Where do I submit return authorization request?,aliens office|police units of foreigners and borders,994614,where_to_apply,,answer
+R21,How long is return authorization valid?,ninety days|entries and exits,994614,duration_or_validity,,answer
+R22,Can you provide legal advice for a court appeal strategy?,,,,,uncertain
+R23,What is the passport number format accepted by every consulate?,,,,,uncertain
+R24,What is fee 790 code 012?,tax model 790 code 012|fee amount,,fees,,answer
+R25,Where can I apply if I am abroad for NIE assignment?,spanish consular offices|consular district,994354,where_to_apply,,answer
+R26,Can you tell me tomorrow's EUR to USD exchange rate?,,,,,uncertain
+R27,What color is the police headquarters building in Madrid?,,,,,uncertain
+R28,Give me a guaranteed approval checklist for every case type.,,,,,uncertain
+R29,Can I skip payment and still get the card today?,,,,,uncertain
+R30,What is the private email of the officer handling my file?,,,,,uncertain
+R31,Can you submit my immigration application for me right now?,,,,,uncertain
+R32,Which train should I take to the aliens office?,,,,,uncertain
+R33,What was the law in 1995 for this procedure exactly?,,,,,uncertain
+R34,Tell me the WhatsApp contact for NIE emergencies.,,,,,uncertain
+R35,Can you provide legal representation in court for appeals?,,,,,uncertain
+R36,What is the procedure code for return authorization?,994614|code of the procedure,994614,procedure_metadata,,answer
+R37,Which form is required for return authorization?,ex13,994614,forms,EX13,answer
+R38,Where can I submit a student card request?,office for foreigners|police station,993954,where_to_apply,,answer
+R39,How long is registration certificate validity?,1 year|renewable,994596,duration_or_validity,,answer
+R40,Which form is used for registration certificate?,ex16,994596,forms,EX16,answer
+R41,What is the code for short-term stay extension?,994236|code of the procedure,994236,procedure_metadata,,answer
+R42,What fee model appears for NIE assignment?,tax model 790 code 012|fee,994354,fees,,answer
+R43,Can I apply for all procedures with one random form EX00?,,,,,uncertain
+R44,Is there a same-day premium lane if I pay extra cash?,,,,,uncertain
+R45,Can you confirm my case result without any documents?,,,,,uncertain
+R46,Which office handles return authorization applications?,aliens office|police units of foreigners and borders,994614,where_to_apply,,answer
+R47,What exact appointment URL should I click for this city now?,,,,,uncertain
+R48,What form is used for residence card initial or renewal?,ex17,994694,forms,EX17,answer
+R49,Can I process this using only a social media profile as ID?,,,,,uncertain
+R50,Where should I apply for residence card if domiciled in Spain?,aliens office|police station,994694,where_to_apply,,answer

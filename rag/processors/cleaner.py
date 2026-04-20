@@ -16,7 +16,7 @@ def normalize_whitespace(text: str) -> str:
 
 
 def fix_html_artifacts(text: str) -> str:
-    text = text.replace("<strong", "")
+    text = text.replace("<strong>", "")
     text = text.replace("</strong>", "")
     return text
 
