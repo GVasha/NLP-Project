@@ -7,9 +7,9 @@ class QAService:
         self.retriever = SmartRetriever()
         self.answerer = Answerer()
 
-    def ask(self, question: str) -> dict:
+    def ask(self, question: str, history: list[dict] | None = None) -> dict:
         docs = self.retriever.search(question)
-        answer = self.answerer.answer(question, docs)
+        answer = self.answerer.answer(question, docs, history=history)
 
         sources = [
             {

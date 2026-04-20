@@ -29,6 +29,12 @@
 
       setError("");
       setLoading(true);
+
+      // Build history from existing messages (skip the initial welcome message)
+      const history = messages
+        .slice(1)
+        .map((m) => ({ role: m.role, text: m.text }));
+
       setMessages((prev) => prev.concat([{ role: "user", text: trimmed }]));
       setInput("");
 
@@ -36,7 +42,7 @@
         const response = await fetch("/api/chat", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message: trimmed }),
+          body: JSON.stringify({ message: trimmed, history }),
         });
         const data = await response.json();
         if (!response.ok) {

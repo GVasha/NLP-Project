@@ -45,6 +45,21 @@ def tokenize(text: str) -> list[str]:
     return [t for t in tokens if len(t) > 2 and t not in QUERY_STOPWORDS]
 
 
+GREETING_PATTERNS = re.compile(
+    r"^\s*(hi|hello|hey|good\s+(morning|afternoon|evening)|howdy|greetings|what'?s\s+up|sup)\b",
+    re.IGNORECASE,
+)
+
+GREETING_RESPONSE = (
+    "Hello! I'm here to help with immigration and administrative procedure questions. "
+    "Feel free to ask about visas, residence cards, NIE, required documents, fees, or any other procedure."
+)
+
+
+def is_greeting(question: str) -> bool:
+    return bool(GREETING_PATTERNS.match(question.strip())) and len(question.strip().split()) <= 6
+
+
 def detect_ambiguous_or_oos_query(question: str) -> bool:
     q = normalize(question)
     if any(x in q for x in [
@@ -259,12 +274,16 @@ class Answerer:
         self.model = OLLAMA_MODEL
         self.ollama_url = "http://127.0.0.1:11434/api/chat"
 
-    def answer(self, question: str, docs):
-        # Conservative pre-check for out-of-scope/underspecified queries or weak evidence.
-        overlap = retrieval_overlap_ratio(question, docs)
-        if detect_ambiguous_or_oos_query(question):
-            return UNCERTAINTY_RESPONSE
-        if overlap < 0.20:
+    def answer(self, question: str, docs, history: list[dict] | None = None):
+        has_history = bool(history)
+
+        if is_greeting(question) and not has_history:
+            return GREETING_RESPONSE
+
+        # Only block queries that are explicitly out-of-scope (weather, etc.).
+        # Do not block on vocabulary overlap — natural language questions ("how do I get
+        # my visa?") won't share tokens with technical docs, but are still valid queries.
+        if detect_ambiguous_or_oos_query(question) and not has_history:
             return UNCERTAINTY_RESPONSE
 
         context = build_context(docs)
@@ -276,12 +295,17 @@ Context:
 {context}
 """
 
+        messages = [{"role": "system", "content": SYSTEM_PROMPT}]
+        for turn in (history or []):
+            role = turn.get("role", "user")
+            text = str(turn.get("text", "")).strip()
+            if role in {"user", "assistant"} and text:
+                messages.append({"role": role, "content": text})
+        messages.append({"role": "user", "content": user_prompt})
+
         payload = {
             "model": self.model,
-            "messages": [
-                {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user", "content": user_prompt},
-            ],
+            "messages": messages,
             "stream": False,
         }
         request = urllib.request.Request(
@@ -309,23 +333,5 @@ Context:
 
         parsed = json.loads(raw)
         answer = parsed["message"]["content"]
-
-        # Add grounded evidence highlights to increase factual traceability and keyword coverage.
-        intents = detect_intents(question)
-        evidence = select_support_sentences(question, docs, intents, limit=3)
-        if evidence and not detect_uncertainty(answer):
-            evidence_block = "\n".join(f"- {line}" for line in evidence)
-            answer = f"{answer}\n\nEvidence highlights:\n{evidence_block}"
-
-        # Post-check: if generated answer looks weakly grounded, fail safe.
-        grounded_ratio, unsupported_count, claim_count = grounded_sentence_ratio(answer, docs)
-        if claim_count > 0 and grounded_ratio < 0.50 and unsupported_count >= 2:
-            extractive_answer = build_extractive_answer(question, docs)
-            if not detect_uncertainty(extractive_answer):
-                return extractive_answer
-            return UNCERTAINTY_RESPONSE
-
-        if detect_ambiguous_or_oos_query(question) and not detect_uncertainty(answer) and grounded_ratio < 0.70:
-            return UNCERTAINTY_RESPONSE
 
         return answer

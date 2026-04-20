@@ -57,12 +57,16 @@ class DocumentChatHandler(SimpleHTTPRequestHandler):
             self._send_json({"error": "message is required"}, HTTPStatus.BAD_REQUEST)
             return
 
+        history = payload.get("history", [])
+        if not isinstance(history, list):
+            history = []
+
         if self.qa_service is None:
             self._send_json({"error": "QA service not initialized"}, HTTPStatus.INTERNAL_SERVER_ERROR)
             return
 
         try:
-            result = self.qa_service.ask(question)
+            result = self.qa_service.ask(question, history=history)
         except Exception as exc:  # noqa: BLE001
             self._send_json(
                 {
@@ -104,6 +108,7 @@ def run_cli() -> None:
         "DOCUMENT CHAT (RAG CLI)",
         "Ask document questions.\nCommands: /exit",
     )
+    history: list[dict] = []
     while True:
         try:
             question = input("\nYou > ").strip()
@@ -118,12 +123,13 @@ def run_cli() -> None:
             break
 
         try:
-            result = service.ask(question)
+            result = service.ask(question, history=history)
         except Exception as exc:  # noqa: BLE001
             render_box("ERROR", str(exc))
             continue
 
-        render_box("ASSISTANT", result.get("answer", ""))
+        answer = result.get("answer", "")
+        render_box("ASSISTANT", answer)
         sources = result.get("sources", [])
         if sources:
             lines = []
@@ -134,6 +140,9 @@ def run_cli() -> None:
                 )
                 lines.append(f"    {source.get('source_url')}")
             render_box("SOURCES", "\n".join(lines))
+
+        history.append({"role": "user", "text": question})
+        history.append({"role": "assistant", "text": answer})
 
 
 def run_server(host: str = HOST, port: int = PORT) -> None:
